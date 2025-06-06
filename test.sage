@@ -21,6 +21,7 @@ class Permutation:
         return matrix(mat_arr)
 
 def row_degree(M):
+    ## exists: M.row_degrees()  |  M.row_degrees(shifts)
     max_deg = [0] * M.nrows()
     for i in range(M.nrows()):
         for j in range(M.ncols()):
@@ -69,6 +70,8 @@ def get_shift(s,delta):
     return Permutation([x[2] for x in idx])
 
 def row_rank_profile(M):
+    ## can be deduced from M.pivots()  ||  M.transpose().pivots()
+    ## to add to sage?
     profile = []
     subm = matrix(0,M.ncols())
     r = rank(M)
@@ -81,6 +84,8 @@ def row_rank_profile(M):
     return r,profile
 
 def col_rank_profile(M):
+    ## can be deduced from M.pivots()  ||  M.transpose().pivots()
+    ## to add to sage?
     profile = []
     subm = matrix(M.nrows(),0)
     r = rank(M)
@@ -158,7 +163,7 @@ def linear_interpolation_basis(E,J,s,delta):
 if __name__ == "__main__":
     print('row degree:')
     M = matrix([[x^2+36*x,31*x,0],[3*x+13,x+57,0],[96,96,1]])
-    print(row_degree(M),'\n')
+    print(M.row_degrees(),'\n')
     print('expand:')
     exp = expand(M,2)
     print(exp,'\n')
