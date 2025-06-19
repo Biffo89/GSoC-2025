@@ -161,6 +161,7 @@ def linear_interpolation_basis(E,J,s,delta):
     return compress(unc,1)
 
 if __name__ == "__main__":
+    R.<x> = GF(97)[]
     print('row degree:')
     M = matrix([[x^2+36*x,31*x,0],[3*x+13,x+57,0],[96,96,1]])
     print(M.row_degrees(),'\n')
@@ -170,7 +171,6 @@ if __name__ == "__main__":
     print('compress:')
     print(compress(exp,2),'\n')
     print('expand_shift(0):')
-    R.<x> = GF(97)[]
     E = matrix(R,[[27,49,29],[50,58,0],[77,10,29]])
     m = E.nrows()
     sigma = E.ncols()
@@ -180,6 +180,10 @@ if __name__ == "__main__":
     s = [3,0,2]
     delta = 4
     print(expand_shift(sigma,E,Z,s),'\n')
+    print('row_rank_profile:')
+    print(row_rank_profile(M))
+    print('naive_krylov_rank_profile:')
+    print(naive_krylov_rank_profile(E,Z,s,delta))
     print('krylov_rank_profile:')
     print(krylov_rank_profile(E,Z,s,delta),'\n')
     print('linear_interpolation_basis:')
