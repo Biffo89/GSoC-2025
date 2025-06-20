@@ -328,3 +328,6 @@ def measure():
     start = time.time()
     test.E.linear_interpolation_basis(test.J,test.degree,test.field[x].gen(),test.shift)
     print(time.time() - start)
+
+def reproduce_seg_fault():
+    matrix.zero(GF(4),2,0).with_permuted_rows(Permutation([2,1]))
