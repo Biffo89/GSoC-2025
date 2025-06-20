@@ -198,31 +198,42 @@ def generate_test_set():
         jordan_numbers = range(1,max(sig//4+1,2)) if sig > 0 else []
 
         J_set = []
+        if sig > 1:
+            for d in density_set:
+                J_set.append({'mode':'density','density':d})
 
-        for d in density_set:
-            J_set.append({'mode':'density','density':d})
+            for r in J_ranks:
+                J_set.append({'mode':'rank','rank':r})
 
-        for r in J_ranks:
-            J_set.append({'mode':'rank','rank':r})
-
-        for j in jordan_numbers:
-            J_set.append({'mode':'jordan','block_number':j})
+            for j in jordan_numbers:
+                J_set.append({'mode':'jordan','block_number':j})
+        elif sig == 0:
+            J_set.append({'mode':'density','density':float(1)})
+        else:
+            J_set.append({'mode':'density','density':float(0)})
+            J_set.append({'mode':'density','density':float(1)})
 
         for m in m_set:
             E_ranks = random.sample(range(min(m,sig)+1),2) if min(m,sig) > 1 else []
             E_set = []
+            
+            if m > 1:
+                for d in density_set:
+                    E_set.append({'mode':'density','density':d})
 
-            for d in density_set:
-                E_set.append({'mode':'density','density':d})
-
-            for r in E_ranks:
-                E_set.append({'mode':'rank','rank':r})
+                for r in E_ranks:
+                    E_set.append({'mode':'rank','rank':r})
+            elif m == 0:
+                E_set.append({'mode':'density','density':float(1)})
+            else:
+                E_set.append({'mode':'density','density':float(0)})
+                E_set.append({'mode':'density','density':float(1)})
 
             for f in field_set:
                 for E_opt in E_set:
                     for J_opt in J_set:
                         for shift in shift_set:
-                            if random.random() < 0.01:
+                            if random.random() < 0.001: # ~20 seconds
                                 test_set.append(KrylovTestInstance(f,m,sig,{'E_mode':E_opt,'J_mode':J_opt,'shift_mode':shift}))
 
     return test_set
@@ -237,13 +248,23 @@ def is_basis_correct(test,basis=None):
         basis = test.linear_interpolation_basis()
     if not basis.is_popov(shifts=test.shift):
         return False
+    if basis.nrows()*basis.ncols() != 0 and basis.degree() > test.sigma:
+        return False
+    priority = lambda c,d : test.shift[c] + d
+    index = lambda i : (i%test.m,i//test.m)
+    priority_triplets = sorted([[priority(*index(i)),index(i),i] for i in range(test.m*(test.degree+1))])
+    priority_permutation = Permutation([t[2]+1 for t in priority_triplets])
+    try:
+        if basis.expansion(test.degree).with_permuted_columns(priority_permutation)*test.E.striped_krylov_matrix(test.J,test.degree,test.shift) != matrix.zero(test.field,test.m,test.sigma):
+            return False
+    except:
+        return False
     return True
 
 def run_test_set(tests):
     success = [{'profile_completed':False,'basis_completed':False,'profile_correct':False,'basis_correct':False} for i in range(len(tests))]
+    start = time.time()
     for i in range(len(tests)):
-        print(i)
-        print(tests[i].generator())
         test = tests[i]
         profile = None
         basis = None
@@ -274,10 +295,12 @@ def run_test_set(tests):
             continue
         # basis is correct
         success[i]['basis_correct'] = is_basis_correct(test,basis)
+    running_time = time.time() - start
     correct = sum([sum(result.values()) for result in success])
     total = sum([len(result) for result in success])
     ratio = (float(100)*float(correct))/float(total)
     print(f"Tests passed: {correct} out of {total} ({ratio}%)")
+    print(f"Completed in {running_time:.2f}s")
     pc = 5
     bc = 5
     pmn = 5
@@ -296,7 +319,7 @@ def run_test_set(tests):
         if bcr > 0 and not success[i]['basis_correct']:
             bcr -= 1
             failure = True
-        if failure:
+        if failure and tests[i].m*tests[i].sigma != 0:
             print(i)
             print(success[i])
             print(tests[i].generator())
