@@ -1,0 +1,1870 @@
+          0x7f3eb2a0a84a <_PyEval_EvalFrameDefault+19098>,
+          0x7f3eb2a0cd0b <_PyEval_EvalFrameDefault+28507>,
+          0x7f3eb2a079fb <_PyEval_EvalFrameDefault+7243>,
+          0x7f3eb2a07a9e <_PyEval_EvalFrameDefault+7406>,
+          0x7f3eb2a0a030 <_PyEval_EvalFrameDefault+17024>,
+          0x7f3eb2a0a159 <_PyEval_EvalFrameDefault+17321>,
+          0x7f3eb2a08100 <_PyEval_EvalFrameDefault+9040>,
+          0x7f3eb2a08678 <_PyEval_EvalFrameDefault+10440>,
+          0x7f3eb2a0db33 <_PyEval_EvalFrameDefault+32131>,
+          0x7f3eb2a0c650 <_PyEval_EvalFrameDefault+26784>,
+          0x7f3eb2a0c713 <_PyEval_EvalFrameDefault+26979>,
+          0x7f3eb2a0b5eb <_PyEval_EvalFrameDefault+22587>,
+          0x7f3eb2a08448 <_PyEval_EvalFrameDefault+9880>,
+          0x7f3eb2a07d54 <_PyEval_EvalFrameDefault+8100>,
+          0x7f3eb2a0e3c8 <_PyEval_EvalFrameDefault+34328>,
+          0x7f3eb2a09e44 <_PyEval_EvalFrameDefault+16532>,
+          0x7f3eb2a09ee1 <_PyEval_EvalFrameDefault+16689>,
+          0x7f3eb2a09f6c <_PyEval_EvalFrameDefault+16828>,
+          0x7f3eb2a0ab12 <_PyEval_EvalFrameDefault+19810>,
+          0x7f3eb2a0ad3d <_PyEval_EvalFrameDefault+20365>,
+          0x7f3eb2a0e4b0 <_PyEval_EvalFrameDefault+34560>,
+          0x7f3eb2a0aa66 <_PyEval_EvalFrameDefault+19638>,
+          0x7f3eb2a0b202 <_PyEval_EvalFrameDefault+21586>,
+          0x7f3eb2a0c100 <_PyEval_EvalFrameDefault+25424>,
+          0x7f3eb2a0a364 <_PyEval_EvalFrameDefault+17844>,
+          0x7f3eb2a0ae9e <_PyEval_EvalFrameDefault+20718>,
+          0x7f3eb2a087f2 <_PyEval_EvalFrameDefault+10818>,
+          0x7f3eb2a0e33b <_PyEval_EvalFrameDefault+34187>,
+          0x7f3eb2a0af5d <_PyEval_EvalFrameDefault+20909>,
+          0x7f3eb2a0a282 <_PyEval_EvalFrameDefault+17618>,
+          0x7f3eb2a0b150 <_PyEval_EvalFrameDefault+21408>,
+          0x7f3eb2a0b034 <_PyEval_EvalFrameDefault+21124>,
+          0x7f3eb2a0b8ad <_PyEval_EvalFrameDefault+23293>,
+          0x7f3eb2a0b830 <_PyEval_EvalFrameDefault+23168>,
+          0x7f3eb2a0cc6e <_PyEval_EvalFrameDefault+28350>,
+          0x7f3eb2a06a02 <_PyEval_EvalFrameDefault+3154>,
+          0x7f3eb2a06d10 <_PyEval_EvalFrameDefault+3936>,
+          0x7f3eb2a0b56d <_PyEval_EvalFrameDefault+22461>,
+          0x7f3eb2a06b87 <_PyEval_EvalFrameDefault+3543>,
+          0x7f3eb2a09b1f <_PyEval_EvalFrameDefault+15727>,
+          0x7f3eb2a06b20 <_PyEval_EvalFrameDefault+3440>,
+          0x7f3eb2a07ffb <_PyEval_EvalFrameDefault+8779>,
+          0x7f3eb2a0a978 <_PyEval_EvalFrameDefault+19400>,
+          0x7f3eb2a0aa0f <_PyEval_EvalFrameDefault+19551>,
+          0x7f3eb2a09c8d <_PyEval_EvalFrameDefault+16093>,
+          0x7f3eb2a0aaf7 <_PyEval_EvalFrameDefault+19783>,
+          0x7f3eb2a098c7 <_PyEval_EvalFrameDefault+15127>,
+          0x7f3eb2a09957 <_PyEval_EvalFrameDefault+15271>,
+          0x7f3eb2a099cd <_PyEval_EvalFrameDefault+15389>,
+          0x7f3eb2a09a48 <_PyEval_EvalFrameDefault+15512>,
+          0x7f3eb2a09ac5 <_PyEval_EvalFrameDefault+15637>,
+          0x7f3eb2a0e035 <_PyEval_EvalFrameDefault+33413>,
+          0x7f3eb2a06a67 <_PyEval_EvalFrameDefault+3255>,
+          0x7f3eb2a09c0e <_PyEval_EvalFrameDefault+15966>,
+          0x7f3eb2a0964d <_PyEval_EvalFrameDefault+14493>,
+          0x7f3eb2a096bf <_PyEval_EvalFrameDefault+14607>,
+          0x7f3eb2a09816 <_PyEval_EvalFrameDefault+14950>,
+          0x7f3eb2a08d49 <_PyEval_EvalFrameDefault+12185>,
+          0x7f3eb2a0ae83 <_PyEval_EvalFrameDefault+20691>,
+          0x7f3eb2a0cbec <_PyEval_EvalFrameDefault+28220>,
+          0x7f3eb2a0c1f9 <_PyEval_EvalFrameDefault+25673>,
+          0x7f3eb2a0ca08 <_PyEval_EvalFrameDefault+27736>,
+          0x7f3eb2a0cbc0 <_PyEval_EvalFrameDefault+28176>,
+          0x7f3eb2a0918e <_PyEval_EvalFrameDefault+13278>,
+          0x7f3eb2a090dc <_PyEval_EvalFrameDefault+13100>,
+          0x7f3eb2a0a4e8 <_PyEval_EvalFrameDefault+18232>,
+          0x7f3eb2a08880 <_PyEval_EvalFrameDefault+10960>,
+          0x7f3eb2a08913 <_PyEval_EvalFrameDefault+11107>,
+          0x7f3eb2a0901f <_PyEval_EvalFrameDefault+12911>,
+          0x7f3eb2a0b663 <_PyEval_EvalFrameDefault+22707>,
+          0x7f3eb2a0c862 <_PyEval_EvalFrameDefault+27314>,
+          0x7f3eb2a0805b <_PyEval_EvalFrameDefault+8875>,
+          0x7f3eb2a0c810 <_PyEval_EvalFrameDefault+27232>,
+          0x7f3eb2a084b7 <_PyEval_EvalFrameDefault+9991>,
+          0x7f3eb2a0e491 <_PyEval_EvalFrameDefault+34529>,
+          0x7f3eb2a07386 <_PyEval_EvalFrameDefault+5590>,
+          0x7f3eb2a06e7a <_PyEval_EvalFrameDefault+4298>,
+          0x7f3eb2a06aba <_PyEval_EvalFrameDefault+3338>,
+          0x7f3eb2a09268 <_PyEval_EvalFrameDefault+13496>,
+          0x7f3eb2a06e25 <_PyEval_EvalFrameDefault+4213>,
+          0x7f3eb2a089a8 <_PyEval_EvalFrameDefault+11256>,
+          0x7f3eb2a08a14 <_PyEval_EvalFrameDefault+11364>,
+          0x7f3eb2a07ef9 <_PyEval_EvalFrameDefault+8521>,
+          0x7f3eb2a0876b <_PyEval_EvalFrameDefault+10683>,
+          0x7f3eb2a08e30 <_PyEval_EvalFrameDefault+12416>,
+          0x7f3eb2a0dd94 <_PyEval_EvalFrameDefault+32740>,
+          0x7f3eb2a08a72 <_PyEval_EvalFrameDefault+11458>,
+          0x7f3eb2a092d0 <_PyEval_EvalFrameDefault+13600>,
+          0x7f3eb2a06dd0 <_PyEval_EvalFrameDefault+4128>,
+          0x7f3eb2a0943c <_PyEval_EvalFrameDefault+13964>,
+          0x7f3eb2a09495 <_PyEval_EvalFrameDefault+14053>,
+          0x7f3eb2a09339 <_PyEval_EvalFrameDefault+13705>,
+          0x7f3eb2a0883f <_PyEval_EvalFrameDefault+10895>,
+          0x7f3eb2a0b3b8 <_PyEval_EvalFrameDefault+22024>,
+          0x7f3eb2a06404 <_PyEval_EvalFrameDefault+1620>,
+          0x7f3eb2a06ec5 <_PyEval_EvalFrameDefault+4373>,
+          0x7f3eb2a0db03 <_PyEval_EvalFrameDefault+32083>,
+          0x7f3eb2a07888 <_PyEval_EvalFrameDefault+6872>,
+          0x7f3eb2a07098 <_PyEval_EvalFrameDefault+4840>,
+          0x7f3eb2a0b334 <_PyEval_EvalFrameDefault+21892>,
+          0x7f3eb2a0bac3 <_PyEval_EvalFrameDefault+23827>,
+          0x7f3eb2a094fb <_PyEval_EvalFrameDefault+14155>,
+          0x7f3eb2a0854e <_PyEval_EvalFrameDefault+10142>,
+          0x7f3eb2a06771 <_PyEval_EvalFrameDefault+2497>,
+          0x7f3eb2a08b04 <_PyEval_EvalFrameDefault+11604>,
+          0x7f3eb2a0c4f7 <_PyEval_EvalFrameDefault+26439>,
+          0x7f3eb2a06bf6 <_PyEval_EvalFrameDefault+3654>,
+          0x7f3eb2a0dea9 <_PyEval_EvalFrameDefault+33017>,
+          0x7f3eb2a0b3c7 <_PyEval_EvalFrameDefault+22039>,
+          0x7f3eb2a09568 <_PyEval_EvalFrameDefault+14264>,
+          0x7f3eb2a06c75 <_PyEval_EvalFrameDefault+3781>,
+          0x7f3eb2a0717d <_PyEval_EvalFrameDefault+5069>,
+          0x7f3eb2a0710b <_PyEval_EvalFrameDefault+4955>,
+          0x7f3eb2a09d8f <_PyEval_EvalFrameDefault+16351>,
+          0x7f3eb2a097a4 <_PyEval_EvalFrameDefault+14836>,
+          0x7f3eb2a09731 <_PyEval_EvalFrameDefault+14721>,
+          0x7f3eb2a0b2b3 <_PyEval_EvalFrameDefault+21763>,
+          0x7f3eb2a0b4fc <_PyEval_EvalFrameDefault+22348>,
+          0x7f3eb2a09ce6 <_PyEval_EvalFrameDefault+16182>,
+          0x7f3eb2a0b780 <_PyEval_EvalFrameDefault+22992>,
+          0x7f3eb2a085b5 <_PyEval_EvalFrameDefault+10245>,
+          0x7f3eb2a0bb60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f3eb2a0bb60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f3eb2a0ba20 <_PyEval_EvalFrameDefault+23664>,
+          0x7f3eb2a0b93d <_PyEval_EvalFrameDefault+23437>,
+          0x7f3eb2a07dde <_PyEval_EvalFrameDefault+8238>,
+          0x7f3eb2a07e58 <_PyEval_EvalFrameDefault+8360>,
+          0x7f3eb2a09b70 <_PyEval_EvalFrameDefault+15808>,
+          0x7f3eb2a09397 <_PyEval_EvalFrameDefault+13799>,
+          0x7f3eb2a0bb60 <_PyEval_EvalFrameDefault+23984> <repeats 60 times>,
+          0x7f3eb2a0b38e <_PyEval_EvalFrameDefault+21982>,
+          0x7f3eb2a0d8f0 <_PyEval_EvalFrameDefault+31552>,
+          0x7f3eb2a0d993 <_PyEval_EvalFrameDefault+31715>,
+          0x7f3eb2a067c0 <_PyEval_EvalFrameDefault+2576>,
+          0x7f3eb2a0b97a <_PyEval_EvalFrameDefault+23498>,
+          0x7f3eb2a0846b <_PyEval_EvalFrameDefault+9915>,
+          0x7f3eb2a084f0 <_PyEval_EvalFrameDefault+10048>,
+          0x7f3eb2a06400 <_PyEval_EvalFrameDefault+1616>,
+          0x7f3eb2a0b70a <_PyEval_EvalFrameDefault+22874>,
+          0x7f3eb2a0dc28 <_PyEval_EvalFrameDefault+32376>,
+          0x7f3eb2a079a8 <_PyEval_EvalFrameDefault+7160>,
+          0x7f3eb2a0df90 <_PyEval_EvalFrameDefault+33248>,
+          0x7f3eb2a0dcb7 <_PyEval_EvalFrameDefault+32519>...}
+        opcode = <optimized out>
+        oparg = <optimized out>
+        cframe = {current_frame = 0x7f3eb28ef3a8,
+          previous = 0x7f3eb2f689c8 <_PyRuntime+459976>}
+        entry_frame = {f_code = 0x7f3eb216e590, previous = 0x0,
+          f_funcobj = 0x0, f_globals = 0x0,
+          f_builtins = 0x7f3eb2f688b8 <_PyRuntime+459704>, f_locals = 0x0,
+          frame_obj = 0x90, prev_instr = 0x7f3eb216e650, stacktop = 0,
+          return_offset = 0, owner = 3 '\003', localsplus = {0x7f3eb2251e40}}
+        kwnames = 0x0
+        prev_cframe = <optimized out>
+        next_instr = 0x7f3e5c62d18e
+        stack_pointer = <optimized out>
+        dying = <optimized out>
+#22 0x00007f3eb2b42f25 in PyEval_EvalCode (co=co@entry=0x7f3eb1f04ea0,
+    globals=globals@entry=0x7f3eb2251e40, locals=locals@entry=0x7f3eb2251e40)
+    at Python/ceval.c:578
+        tstate = 0x7f3eb2f688b8 <_PyRuntime+459704>
+        builtins = <optimized out>
+        desc = {fc_globals = 0x7f3eb2251e40, fc_builtins = 0x7f3eb21f4d00,
+          fc_name = 0x7f3eb2efe2f0 <_PyRuntime+24048>,
+          fc_qualname = 0x7f3eb2efe2f0 <_PyRuntime+24048>,
+          fc_code = 0x7f3eb1f04ea0, fc_defaults = 0x0, fc_kwdefaults = 0x0,
+          fc_closure = 0x0}
+        func = 0x7f3eb2236200
+        res = <optimized out>
+#23 0x00007f3eb2b927bd in run_eval_code_obj (
+    tstate=tstate@entry=0x7f3eb2f688b8 <_PyRuntime+459704>,
+    co=co@entry=0x7f3eb1f04ea0, globals=globals@entry=0x7f3eb2251e40,
+    locals=locals@entry=0x7f3eb2251e40) at Python/pythonrun.c:1722
+        v = <optimized out>
+#24 0x00007f3eb2b928c5 in run_mod (mod=mod@entry=0x55996647b8e0,
+    filename=filename@entry=0x7f3eb2011200,
+    globals=globals@entry=0x7f3eb2251e40, locals=locals@entry=0x7f3eb2251e40,
+    flags=flags@entry=0x7ffea7a18e90, arena=arena@entry=0x7f3eb2175830)
+    at Python/pythonrun.c:1743
+        tstate = 0x7f3eb2f688b8 <_PyRuntime+459704>
+        co = 0x7f3eb1f04ea0
+        v = <optimized out>
+#25 0x00007f3eb2b929cf in pyrun_file (fp=fp@entry=0x559966346490,
+    filename=filename@entry=0x7f3eb2011200, start=start@entry=257,
+    globals=globals@entry=0x7f3eb2251e40, locals=locals@entry=0x7f3eb2251e40,
+    closeit=closeit@entry=1, flags=0x7ffea7a18e90) at Python/pythonrun.c:1643
+        arena = 0x7f3eb2175830
+        mod = 0x55996647b8e0
+        ret = <optimized out>
+#26 0x00007f3eb2b957de in _PyRun_SimpleFileObject (fp=fp@entry=0x559966346490,
+    filename=filename@entry=0x7f3eb2011200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffea7a18e90) at Python/pythonrun.c:433
+        m = 0x7f3eb222de40
+        d = 0x7f3eb2251e40
+        v = <optimized out>
+        set_file_name = 1
+        ret = -1
+        pyc = <optimized out>
+#27 0x00007f3eb2b95d2f in _PyRun_AnyFileObject (fp=fp@entry=0x559966346490,
+    filename=filename@entry=0x7f3eb2011200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffea7a18e90) at Python/pythonrun.c:78
+        decref_filename = 0
+        res = <optimized out>
+#28 0x00007f3eb2bb88bc in pymain_run_file_obj (skip_source_first_line=0,
+    filename=0x7f3eb2011200, program_name=0x7f3eb22546f0) at Modules/main.c:360
+        fp = 0x559966346490
+        sb = {st_dev = 2064, st_ino = 471274, st_nlink = 1, st_mode = 33261,
+          st_uid = 1000, st_gid = 1000, __pad0 = 0, st_rdev = 0,
+          st_size = 360, st_blksize = 4096, st_blocks = 8, st_atim = {
+            tv_sec = 1750238365, tv_nsec = 997983600}, st_mtim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, st_ctim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, __glibc_reserved = {0,
+            0, 0}}
+        cf = {cf_flags = 0, cf_feature_version = 12}
+        run = <optimized out>
+        fp = <optimized out>
+        sb = <optimized out>
+        cf = <optimized out>
+        run = <optimized out>
+        ch = <optimized out>
+#29 pymain_run_file (config=0x7f3eb2f0b498 <_PyRuntime+77720>)
+    at Modules/main.c:379
+        filename = 0x7f3eb2011200
+        program_name = 0x7f3eb22546f0
+        res = <optimized out>
+        filename = <optimized out>
+        program_name = <optimized out>
+        res = <optimized out>
+#30 pymain_run_python (exitcode=0x7ffea7a18e60) at Modules/main.c:633
+        main_importer_path = <optimized out>
+        interp = 0x7f3eb2f0af98 <_PyRuntime+76440>
+        config = 0x7f3eb2f0b498 <_PyRuntime+77720>
+        path0 = 0x7f3eb20287b0
+        main_importer_path = <optimized out>
+        interp = <optimized out>
+        config = <optimized out>
+        path0 = <optimized out>
+        res = <optimized out>
+        _tmp_op_ptr = <optimized out>
+        _tmp_old_op = <optimized out>
+        wstr = <optimized out>
+        old_alloc = <optimized out>
+        res = <optimized out>
+#31 Py_RunMain () at Modules/main.c:713
+        exitcode = <optimized out>
+#32 0x00007f3eb2bb8c68 in pymain_main (args=args@entry=0x7ffea7a18fa0)
+    at Modules/main.c:743
+        status = {_type = _PyStatus_TYPE_OK, func = <optimized out>,
+          err_msg = <optimized out>, exitcode = 3003648}
+#33 0x00007f3eb2bb8d4d in Py_BytesMain (argc=<optimized out>,
+    argv=<optimized out>) at Modules/main.c:767
+        args = {argc = 3, use_bytes_argv = 1, bytes_argv = 0x7ffea7a190c8,
+          wchar_argv = 0x0}
+#34 0x00007f3eb2717083 in __libc_start_main (main=0x55996495e060 <main>,
+    argc=3, argv=0x7ffea7a190c8, init=<optimized out>, fini=<optimized out>,
+    rtld_fini=<optimized out>, stack_end=0x7ffea7a190b8)
+    at ../csu/libc-start.c:308
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {94117305901408,
+                8801980671123039882, 94117305901168, 140731710804160, 0, 0,
+                -8801259034475452790, -8909371118355569014},
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x3,
+              0x7ffea7a190c8}, data = {prev = 0x0, cleanup = 0x0,
+              canceltype = 3}}}
+        not_first_call = <optimized out>
+#35 0x000055996495e09e in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Cython backtrace
+----------------
+#0  0x00007f3eb27d5c20 in __GI___wait4 () at /build/glibc-LcI20x/glibc-2.31/posix/../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x00007f3eb27d5bf0 in __GI___waitpid () at /build/glibc-LcI20x/glibc-2.31/posix/waitpid.c:38
+#2  0x00007f3eb1d61079 in print_enhanced_backtrace () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:672
+#3  0x00007f3eb1d60ff0 in sigdie () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:698
+#4  0x00007f3eb1d63ef2 in sigdie_for_sig () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:256
+#5  0x00007f3eb1d63ed0 in cysigs_signal_handler () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:361
+#6  0x00007f3eb2f8b3e0 in __restore_rt ()
+#7  0x00007f3e5a5b4750 in __pyx_f_4sage_6matrix_17matrix_gf2e_dense_17Matrix_gf2e_dense_swap_rows_c () at /usr/include/m4ri/mzd.h:413
+   408     * \param M Matrix
+   409     * \param rowa Row index.
+   410     * \param rowb Row index.
+   411     */
+   412
+>  413    static inline void mzd_row_swap(mzd_t *M, rci_t const rowa, rci_t const rowb) { _mzd_row_swap(M, rowa, rowb, 0); }
+   414
+   415    /**
+   416     * \brief copy row j from A to row i from B.
+   417     *
+#8  0x00007f3e62e31c28 in __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:28169
+  28164            __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_cycle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28165            __Pyx_GOTREF(__pyx_t_3);
+  28166            __pyx_t_11 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_11 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28167            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28168            __pyx_t_10 = __Pyx_PyIndex_AsSsize_t(__pyx_v_elt); if (unlikely((__pyx_t_10 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+> 28169            __pyx_t_3 = ((struct __pyx_vtabstruct_4sage_6matrix_7matrix0_Matrix *)__pyx_v_temp->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->swap_rows_c(__pyx_v_temp, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28170            __Pyx_GOTREF(__pyx_t_3);
+  28171            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28172
+  28173            /* "sage/matrix/matrix0.pyx":2925
+#9  0x00007f3e62e31ba0 in __pyx_pw_4sage_6matrix_7matrix0_6Matrix_87with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:27858
+  27853      }
+  27854      __Pyx_AddTraceback("sage.matrix.matrix0.Matrix.with_permuted_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  27855      __Pyx_RefNannyFinishContext();
+  27856      return NULL;
+  27857      __pyx_L4_argument_unpacking_done:;
+> 27858      __pyx_r = __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_self), __pyx_v_permutation);
+  27859
+  27860      /* function exit code */
+  27861      {
+  27862        Py_ssize_t __pyx_temp;
+#10 0x00007f3eb2aa7230 in cfunction_vectorcall_FASTCALL_KEYWORDS () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#11 0x00007f3e62a77a9f in __pyx_pf_4sage_6matrix_7matrix2_6Matrix_320krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:140849
+  140844        }
+  140845      }
+  140846      #endif
+  140847      {
+  140848        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_self_permutation};
+> 140849        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+  140850        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  140851        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18688, __pyx_L1_error)
+  140852        __Pyx_GOTREF(__pyx_t_6);
+  140853        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+#12 0x00007f3e62a778d0 in __pyx_pw_4sage_6matrix_7matrix2_6Matrix_321krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:7974
+  7969      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_2);
+  7970      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_3);
+  7971      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form);
+  7972      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_form);
+  7973      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form_PID);
+> 7974      Py_CLEAR(clear_module_state->__pyx_kp_u_echelon_form_over);
+  7975      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place);
+  7976      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place_classical);
+  7977      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_strassen);
+  7978      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_transformation);
+#13 0x00007f3eb2a05db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#14 0x00007f3eb2b42e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#15 0x00007f3eb2b3f955 in builtin_exec_impl () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bltinmodule.c:1096
+#16 0x00007f3eb2b3f8b0 in builtin_exec () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/clinic/bltinmodule.c.h:586
+#17 0x00007f3eb2a05db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#18 0x00007f3eb2a757cd in _PyEval_EvalFrame () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/internal/pycore_ceval.h:89
+#19 0x00007f3eb2a75630 in gen_send_ex2 () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:230
+#20 0x00007f3eb2a76ad0 in gen_send_ex () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:274
+#21 0x00007f3eb2a05db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bytecodes.c:3093
+#22 0x00007f3eb2b42e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#23 0x00007f3eb2b92770 in run_eval_code_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1722
+#24 0x00007f3eb2b92840 in run_mod () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1743
+#25 0x00007f3eb2b92950 in pyrun_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1643
+#26 0x00007f3eb2b956b0 in _PyRun_SimpleFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:433
+#27 0x00007f3eb2b95cf0 in _PyRun_AnyFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:78
+#28 0x00007f3eb2bb880e in pymain_run_file_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:360
+#29 0x00007f3eb2bb87d0 in pymain_run_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:379
+#30 0x00007f3eb2bb7f50 in pymain_run_python () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:633
+#31 0x00007f3eb2bb7f20 in Py_RunMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:713
+#32 0x00007f3eb2bb8c20 in pymain_main () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:743
+#33 0x00007f3eb2bb8d10 in Py_BytesMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:767
+#34 0x00007f3eb2716f90 in __libc_start_main () at /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c:308
+#35 0x000055996495e070 in _start ()
+
+[Inferior 1 (process 1314) detached]
+27      ../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:135: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  mtime = datetime.utcfromtimestamp(os.path.getmtime(filename))
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:136: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  age = datetime.utcnow() - mtime
+Saved trace to /home/nicho/.sage/crash_logs/crash_ksyuey__.log
+------------------------------------------------------------------------
+Unhandled SIGSEGV: A segmentation fault occurred.
+This probably occurred because a *compiled* module has a bug
+in it and is not properly wrapped with sig_on(), sig_off().
+Python will now terminate.
+------------------------------------------------------------------------
+Segmentation fault
+          0x7f45e872c84a <_PyEval_EvalFrameDefault+19098>,
+          0x7f45e872ed0b <_PyEval_EvalFrameDefault+28507>,
+          0x7f45e87299fb <_PyEval_EvalFrameDefault+7243>,
+          0x7f45e8729a9e <_PyEval_EvalFrameDefault+7406>,
+          0x7f45e872c030 <_PyEval_EvalFrameDefault+17024>,
+          0x7f45e872c159 <_PyEval_EvalFrameDefault+17321>,
+          0x7f45e872a100 <_PyEval_EvalFrameDefault+9040>,
+          0x7f45e872a678 <_PyEval_EvalFrameDefault+10440>,
+          0x7f45e872fb33 <_PyEval_EvalFrameDefault+32131>,
+          0x7f45e872e650 <_PyEval_EvalFrameDefault+26784>,
+          0x7f45e872e713 <_PyEval_EvalFrameDefault+26979>,
+          0x7f45e872d5eb <_PyEval_EvalFrameDefault+22587>,
+          0x7f45e872a448 <_PyEval_EvalFrameDefault+9880>,
+          0x7f45e8729d54 <_PyEval_EvalFrameDefault+8100>,
+          0x7f45e87303c8 <_PyEval_EvalFrameDefault+34328>,
+          0x7f45e872be44 <_PyEval_EvalFrameDefault+16532>,
+          0x7f45e872bee1 <_PyEval_EvalFrameDefault+16689>,
+          0x7f45e872bf6c <_PyEval_EvalFrameDefault+16828>,
+          0x7f45e872cb12 <_PyEval_EvalFrameDefault+19810>,
+          0x7f45e872cd3d <_PyEval_EvalFrameDefault+20365>,
+          0x7f45e87304b0 <_PyEval_EvalFrameDefault+34560>,
+          0x7f45e872ca66 <_PyEval_EvalFrameDefault+19638>,
+          0x7f45e872d202 <_PyEval_EvalFrameDefault+21586>,
+          0x7f45e872e100 <_PyEval_EvalFrameDefault+25424>,
+          0x7f45e872c364 <_PyEval_EvalFrameDefault+17844>,
+          0x7f45e872ce9e <_PyEval_EvalFrameDefault+20718>,
+          0x7f45e872a7f2 <_PyEval_EvalFrameDefault+10818>,
+          0x7f45e873033b <_PyEval_EvalFrameDefault+34187>,
+          0x7f45e872cf5d <_PyEval_EvalFrameDefault+20909>,
+          0x7f45e872c282 <_PyEval_EvalFrameDefault+17618>,
+          0x7f45e872d150 <_PyEval_EvalFrameDefault+21408>,
+          0x7f45e872d034 <_PyEval_EvalFrameDefault+21124>,
+          0x7f45e872d8ad <_PyEval_EvalFrameDefault+23293>,
+          0x7f45e872d830 <_PyEval_EvalFrameDefault+23168>,
+          0x7f45e872ec6e <_PyEval_EvalFrameDefault+28350>,
+          0x7f45e8728a02 <_PyEval_EvalFrameDefault+3154>,
+          0x7f45e8728d10 <_PyEval_EvalFrameDefault+3936>,
+          0x7f45e872d56d <_PyEval_EvalFrameDefault+22461>,
+          0x7f45e8728b87 <_PyEval_EvalFrameDefault+3543>,
+          0x7f45e872bb1f <_PyEval_EvalFrameDefault+15727>,
+          0x7f45e8728b20 <_PyEval_EvalFrameDefault+3440>,
+          0x7f45e8729ffb <_PyEval_EvalFrameDefault+8779>,
+          0x7f45e872c978 <_PyEval_EvalFrameDefault+19400>,
+          0x7f45e872ca0f <_PyEval_EvalFrameDefault+19551>,
+          0x7f45e872bc8d <_PyEval_EvalFrameDefault+16093>,
+          0x7f45e872caf7 <_PyEval_EvalFrameDefault+19783>,
+          0x7f45e872b8c7 <_PyEval_EvalFrameDefault+15127>,
+          0x7f45e872b957 <_PyEval_EvalFrameDefault+15271>,
+          0x7f45e872b9cd <_PyEval_EvalFrameDefault+15389>,
+          0x7f45e872ba48 <_PyEval_EvalFrameDefault+15512>,
+          0x7f45e872bac5 <_PyEval_EvalFrameDefault+15637>,
+          0x7f45e8730035 <_PyEval_EvalFrameDefault+33413>,
+          0x7f45e8728a67 <_PyEval_EvalFrameDefault+3255>,
+          0x7f45e872bc0e <_PyEval_EvalFrameDefault+15966>,
+          0x7f45e872b64d <_PyEval_EvalFrameDefault+14493>,
+          0x7f45e872b6bf <_PyEval_EvalFrameDefault+14607>,
+          0x7f45e872b816 <_PyEval_EvalFrameDefault+14950>,
+          0x7f45e872ad49 <_PyEval_EvalFrameDefault+12185>,
+          0x7f45e872ce83 <_PyEval_EvalFrameDefault+20691>,
+          0x7f45e872ebec <_PyEval_EvalFrameDefault+28220>,
+          0x7f45e872e1f9 <_PyEval_EvalFrameDefault+25673>,
+          0x7f45e872ea08 <_PyEval_EvalFrameDefault+27736>,
+          0x7f45e872ebc0 <_PyEval_EvalFrameDefault+28176>,
+          0x7f45e872b18e <_PyEval_EvalFrameDefault+13278>,
+          0x7f45e872b0dc <_PyEval_EvalFrameDefault+13100>,
+          0x7f45e872c4e8 <_PyEval_EvalFrameDefault+18232>,
+          0x7f45e872a880 <_PyEval_EvalFrameDefault+10960>,
+          0x7f45e872a913 <_PyEval_EvalFrameDefault+11107>,
+          0x7f45e872b01f <_PyEval_EvalFrameDefault+12911>,
+          0x7f45e872d663 <_PyEval_EvalFrameDefault+22707>,
+          0x7f45e872e862 <_PyEval_EvalFrameDefault+27314>,
+          0x7f45e872a05b <_PyEval_EvalFrameDefault+8875>,
+          0x7f45e872e810 <_PyEval_EvalFrameDefault+27232>,
+          0x7f45e872a4b7 <_PyEval_EvalFrameDefault+9991>,
+          0x7f45e8730491 <_PyEval_EvalFrameDefault+34529>,
+          0x7f45e8729386 <_PyEval_EvalFrameDefault+5590>,
+          0x7f45e8728e7a <_PyEval_EvalFrameDefault+4298>,
+          0x7f45e8728aba <_PyEval_EvalFrameDefault+3338>,
+          0x7f45e872b268 <_PyEval_EvalFrameDefault+13496>,
+          0x7f45e8728e25 <_PyEval_EvalFrameDefault+4213>,
+          0x7f45e872a9a8 <_PyEval_EvalFrameDefault+11256>,
+          0x7f45e872aa14 <_PyEval_EvalFrameDefault+11364>,
+          0x7f45e8729ef9 <_PyEval_EvalFrameDefault+8521>,
+          0x7f45e872a76b <_PyEval_EvalFrameDefault+10683>,
+          0x7f45e872ae30 <_PyEval_EvalFrameDefault+12416>,
+          0x7f45e872fd94 <_PyEval_EvalFrameDefault+32740>,
+          0x7f45e872aa72 <_PyEval_EvalFrameDefault+11458>,
+          0x7f45e872b2d0 <_PyEval_EvalFrameDefault+13600>,
+          0x7f45e8728dd0 <_PyEval_EvalFrameDefault+4128>,
+          0x7f45e872b43c <_PyEval_EvalFrameDefault+13964>,
+          0x7f45e872b495 <_PyEval_EvalFrameDefault+14053>,
+          0x7f45e872b339 <_PyEval_EvalFrameDefault+13705>,
+          0x7f45e872a83f <_PyEval_EvalFrameDefault+10895>,
+          0x7f45e872d3b8 <_PyEval_EvalFrameDefault+22024>,
+          0x7f45e8728404 <_PyEval_EvalFrameDefault+1620>,
+          0x7f45e8728ec5 <_PyEval_EvalFrameDefault+4373>,
+          0x7f45e872fb03 <_PyEval_EvalFrameDefault+32083>,
+          0x7f45e8729888 <_PyEval_EvalFrameDefault+6872>,
+          0x7f45e8729098 <_PyEval_EvalFrameDefault+4840>,
+          0x7f45e872d334 <_PyEval_EvalFrameDefault+21892>,
+          0x7f45e872dac3 <_PyEval_EvalFrameDefault+23827>,
+          0x7f45e872b4fb <_PyEval_EvalFrameDefault+14155>,
+          0x7f45e872a54e <_PyEval_EvalFrameDefault+10142>,
+          0x7f45e8728771 <_PyEval_EvalFrameDefault+2497>,
+          0x7f45e872ab04 <_PyEval_EvalFrameDefault+11604>,
+          0x7f45e872e4f7 <_PyEval_EvalFrameDefault+26439>,
+          0x7f45e8728bf6 <_PyEval_EvalFrameDefault+3654>,
+          0x7f45e872fea9 <_PyEval_EvalFrameDefault+33017>,
+          0x7f45e872d3c7 <_PyEval_EvalFrameDefault+22039>,
+          0x7f45e872b568 <_PyEval_EvalFrameDefault+14264>,
+          0x7f45e8728c75 <_PyEval_EvalFrameDefault+3781>,
+          0x7f45e872917d <_PyEval_EvalFrameDefault+5069>,
+          0x7f45e872910b <_PyEval_EvalFrameDefault+4955>,
+          0x7f45e872bd8f <_PyEval_EvalFrameDefault+16351>,
+          0x7f45e872b7a4 <_PyEval_EvalFrameDefault+14836>,
+          0x7f45e872b731 <_PyEval_EvalFrameDefault+14721>,
+          0x7f45e872d2b3 <_PyEval_EvalFrameDefault+21763>,
+          0x7f45e872d4fc <_PyEval_EvalFrameDefault+22348>,
+          0x7f45e872bce6 <_PyEval_EvalFrameDefault+16182>,
+          0x7f45e872d780 <_PyEval_EvalFrameDefault+22992>,
+          0x7f45e872a5b5 <_PyEval_EvalFrameDefault+10245>,
+          0x7f45e872db60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f45e872db60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f45e872da20 <_PyEval_EvalFrameDefault+23664>,
+          0x7f45e872d93d <_PyEval_EvalFrameDefault+23437>,
+          0x7f45e8729dde <_PyEval_EvalFrameDefault+8238>,
+          0x7f45e8729e58 <_PyEval_EvalFrameDefault+8360>,
+          0x7f45e872bb70 <_PyEval_EvalFrameDefault+15808>,
+          0x7f45e872b397 <_PyEval_EvalFrameDefault+13799>,
+          0x7f45e872db60 <_PyEval_EvalFrameDefault+23984> <repeats 60 times>,
+          0x7f45e872d38e <_PyEval_EvalFrameDefault+21982>,
+          0x7f45e872f8f0 <_PyEval_EvalFrameDefault+31552>,
+          0x7f45e872f993 <_PyEval_EvalFrameDefault+31715>,
+          0x7f45e87287c0 <_PyEval_EvalFrameDefault+2576>,
+          0x7f45e872d97a <_PyEval_EvalFrameDefault+23498>,
+          0x7f45e872a46b <_PyEval_EvalFrameDefault+9915>,
+          0x7f45e872a4f0 <_PyEval_EvalFrameDefault+10048>,
+          0x7f45e8728400 <_PyEval_EvalFrameDefault+1616>,
+          0x7f45e872d70a <_PyEval_EvalFrameDefault+22874>,
+          0x7f45e872fc28 <_PyEval_EvalFrameDefault+32376>,
+          0x7f45e87299a8 <_PyEval_EvalFrameDefault+7160>,
+          0x7f45e872ff90 <_PyEval_EvalFrameDefault+33248>,
+          0x7f45e872fcb7 <_PyEval_EvalFrameDefault+32519>...}
+        opcode = <optimized out>
+        oparg = <optimized out>
+        cframe = {current_frame = 0x7f45e86113a8,
+          previous = 0x7f45e8c8a9c8 <_PyRuntime+459976>}
+        entry_frame = {f_code = 0x7f45e7e8e590, previous = 0x0,
+          f_funcobj = 0x0, f_globals = 0x0,
+          f_builtins = 0x7f45e8c8a8b8 <_PyRuntime+459704>, f_locals = 0x0,
+          frame_obj = 0x90, prev_instr = 0x7f45e7e8e650, stacktop = 0,
+          return_offset = 0, owner = 3 '\003', localsplus = {0x7f45e7f71e80}}
+        kwnames = 0x0
+        prev_cframe = <optimized out>
+        next_instr = 0x7f459239d18e
+        stack_pointer = <optimized out>
+        dying = <optimized out>
+#22 0x00007f45e8864f25 in PyEval_EvalCode (co=co@entry=0x7f45e7c28ea0,
+    globals=globals@entry=0x7f45e7f71e80, locals=locals@entry=0x7f45e7f71e80)
+    at Python/ceval.c:578
+        tstate = 0x7f45e8c8a8b8 <_PyRuntime+459704>
+        builtins = <optimized out>
+        desc = {fc_globals = 0x7f45e7f71e80, fc_builtins = 0x7f45e7f14d00,
+          fc_name = 0x7f45e8c202f0 <_PyRuntime+24048>,
+          fc_qualname = 0x7f45e8c202f0 <_PyRuntime+24048>,
+          fc_code = 0x7f45e7c28ea0, fc_defaults = 0x0, fc_kwdefaults = 0x0,
+          fc_closure = 0x0}
+        func = 0x7f45e7f56200
+        res = <optimized out>
+#23 0x00007f45e88b47bd in run_eval_code_obj (
+    tstate=tstate@entry=0x7f45e8c8a8b8 <_PyRuntime+459704>,
+    co=co@entry=0x7f45e7c28ea0, globals=globals@entry=0x7f45e7f71e80,
+    locals=locals@entry=0x7f45e7f71e80) at Python/pythonrun.c:1722
+        v = <optimized out>
+#24 0x00007f45e88b48c5 in run_mod (mod=mod@entry=0x55657657e8e0,
+    filename=filename@entry=0x7f45e7d35200,
+    globals=globals@entry=0x7f45e7f71e80, locals=locals@entry=0x7f45e7f71e80,
+    flags=flags@entry=0x7fff1529c250, arena=arena@entry=0x7f45e7e95830)
+    at Python/pythonrun.c:1743
+        tstate = 0x7f45e8c8a8b8 <_PyRuntime+459704>
+        co = 0x7f45e7c28ea0
+        v = <optimized out>
+#25 0x00007f45e88b49cf in pyrun_file (fp=fp@entry=0x556576449490,
+    filename=filename@entry=0x7f45e7d35200, start=start@entry=257,
+    globals=globals@entry=0x7f45e7f71e80, locals=locals@entry=0x7f45e7f71e80,
+    closeit=closeit@entry=1, flags=0x7fff1529c250) at Python/pythonrun.c:1643
+        arena = 0x7f45e7e95830
+        mod = 0x55657657e8e0
+        ret = <optimized out>
+#26 0x00007f45e88b77de in _PyRun_SimpleFileObject (fp=fp@entry=0x556576449490,
+    filename=filename@entry=0x7f45e7d35200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7fff1529c250) at Python/pythonrun.c:433
+        m = 0x7f45e7f4de40
+        d = 0x7f45e7f71e80
+        v = <optimized out>
+        set_file_name = 1
+        ret = -1
+        pyc = <optimized out>
+#27 0x00007f45e88b7d2f in _PyRun_AnyFileObject (fp=fp@entry=0x556576449490,
+    filename=filename@entry=0x7f45e7d35200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7fff1529c250) at Python/pythonrun.c:78
+        decref_filename = 0
+        res = <optimized out>
+#28 0x00007f45e88da8bc in pymain_run_file_obj (skip_source_first_line=0,
+    filename=0x7f45e7d35200, program_name=0x7f45e7d1c780) at Modules/main.c:360
+        fp = 0x556576449490
+        sb = {st_dev = 2064, st_ino = 471274, st_nlink = 1, st_mode = 33261,
+          st_uid = 1000, st_gid = 1000, __pad0 = 0, st_rdev = 0,
+          st_size = 360, st_blksize = 4096, st_blocks = 8, st_atim = {
+            tv_sec = 1750238365, tv_nsec = 997983600}, st_mtim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, st_ctim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, __glibc_reserved = {0,
+            0, 0}}
+        cf = {cf_flags = 0, cf_feature_version = 12}
+        run = <optimized out>
+        fp = <optimized out>
+        sb = <optimized out>
+        cf = <optimized out>
+        run = <optimized out>
+        ch = <optimized out>
+#29 pymain_run_file (config=0x7f45e8c2d498 <_PyRuntime+77720>)
+    at Modules/main.c:379
+        filename = 0x7f45e7d35200
+        program_name = 0x7f45e7d1c780
+        res = <optimized out>
+        filename = <optimized out>
+        program_name = <optimized out>
+        res = <optimized out>
+#30 pymain_run_python (exitcode=0x7fff1529c220) at Modules/main.c:633
+        main_importer_path = <optimized out>
+        interp = 0x7f45e8c2cf98 <_PyRuntime+76440>
+        config = 0x7f45e8c2d498 <_PyRuntime+77720>
+        path0 = 0x7f45e7d4c7b0
+        main_importer_path = <optimized out>
+        interp = <optimized out>
+        config = <optimized out>
+        path0 = <optimized out>
+        res = <optimized out>
+        _tmp_op_ptr = <optimized out>
+        _tmp_old_op = <optimized out>
+        wstr = <optimized out>
+        old_alloc = <optimized out>
+        res = <optimized out>
+#31 Py_RunMain () at Modules/main.c:713
+        exitcode = <optimized out>
+#32 0x00007f45e88dac68 in pymain_main (args=args@entry=0x7fff1529c360)
+    at Modules/main.c:743
+        status = {_type = _PyStatus_TYPE_OK, func = <optimized out>,
+          err_msg = <optimized out>, exitcode = -598007808}
+#33 0x00007f45e88dad4d in Py_BytesMain (argc=<optimized out>,
+    argv=<optimized out>) at Modules/main.c:767
+        args = {argc = 3, use_bytes_argv = 1, bytes_argv = 0x7fff1529c488,
+          wchar_argv = 0x0}
+#34 0x00007f45e8439083 in __libc_start_main (main=0x5565748d6060 <main>,
+    argc=3, argv=0x7fff1529c488, init=<optimized out>, fini=<optimized out>,
+    rtld_fini=<optimized out>, stack_end=0x7fff1529c478)
+    at ../csu/libc-start.c:308
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {93894235480416,
+                2707259344429718214, 93894235480176, 140733548446848, 0, 0,
+                -2707731739688101178, -2658867053351855418},
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x3,
+              0x7fff1529c488}, data = {prev = 0x0, cleanup = 0x0,
+              canceltype = 3}}}
+        not_first_call = <optimized out>
+#35 0x00005565748d609e in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Cython backtrace
+----------------
+#0  0x00007f45e84f7c20 in __GI___wait4 () at /build/glibc-LcI20x/glibc-2.31/posix/../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x00007f45e84f7bf0 in __GI___waitpid () at /build/glibc-LcI20x/glibc-2.31/posix/waitpid.c:38
+#2  0x00007f45e7a83079 in print_enhanced_backtrace () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:672
+#3  0x00007f45e7a82ff0 in sigdie () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:698
+#4  0x00007f45e7a85ef2 in sigdie_for_sig () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:256
+#5  0x00007f45e7a85ed0 in cysigs_signal_handler () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:361
+#6  0x00007f45e8cad3e0 in __restore_rt ()
+#7  0x00007f458bfd0750 in __pyx_f_4sage_6matrix_17matrix_gf2e_dense_17Matrix_gf2e_dense_swap_rows_c () at /usr/include/m4ri/mzd.h:413
+   408     * \param M Matrix
+   409     * \param rowa Row index.
+   410     * \param rowb Row index.
+   411     */
+   412
+>  413    static inline void mzd_row_swap(mzd_t *M, rci_t const rowa, rci_t const rowb) { _mzd_row_swap(M, rowa, rowb, 0); }
+   414
+   415    /**
+   416     * \brief copy row j from A to row i from B.
+   417     *
+#8  0x00007f4598b55c28 in __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:28169
+  28164            __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_cycle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28165            __Pyx_GOTREF(__pyx_t_3);
+  28166            __pyx_t_11 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_11 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28167            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28168            __pyx_t_10 = __Pyx_PyIndex_AsSsize_t(__pyx_v_elt); if (unlikely((__pyx_t_10 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+> 28169            __pyx_t_3 = ((struct __pyx_vtabstruct_4sage_6matrix_7matrix0_Matrix *)__pyx_v_temp->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->swap_rows_c(__pyx_v_temp, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28170            __Pyx_GOTREF(__pyx_t_3);
+  28171            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28172
+  28173            /* "sage/matrix/matrix0.pyx":2925
+#9  0x00007f4598b55ba0 in __pyx_pw_4sage_6matrix_7matrix0_6Matrix_87with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:27858
+  27853      }
+  27854      __Pyx_AddTraceback("sage.matrix.matrix0.Matrix.with_permuted_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  27855      __Pyx_RefNannyFinishContext();
+  27856      return NULL;
+  27857      __pyx_L4_argument_unpacking_done:;
+> 27858      __pyx_r = __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_self), __pyx_v_permutation);
+  27859
+  27860      /* function exit code */
+  27861      {
+  27862        Py_ssize_t __pyx_temp;
+#10 0x00007f45e87c9230 in cfunction_vectorcall_FASTCALL_KEYWORDS () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#11 0x00007f459879ba9f in __pyx_pf_4sage_6matrix_7matrix2_6Matrix_320krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:140849
+  140844        }
+  140845      }
+  140846      #endif
+  140847      {
+  140848        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_self_permutation};
+> 140849        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+  140850        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  140851        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18688, __pyx_L1_error)
+  140852        __Pyx_GOTREF(__pyx_t_6);
+  140853        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+#12 0x00007f459879b8d0 in __pyx_pw_4sage_6matrix_7matrix2_6Matrix_321krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:7974
+  7969      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_2);
+  7970      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_3);
+  7971      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form);
+  7972      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_form);
+  7973      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form_PID);
+> 7974      Py_CLEAR(clear_module_state->__pyx_kp_u_echelon_form_over);
+  7975      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place);
+  7976      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place_classical);
+  7977      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_strassen);
+  7978      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_transformation);
+#13 0x00007f45e8727db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#14 0x00007f45e8864e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#15 0x00007f45e8861955 in builtin_exec_impl () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bltinmodule.c:1096
+#16 0x00007f45e88618b0 in builtin_exec () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/clinic/bltinmodule.c.h:586
+#17 0x00007f45e8727db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#18 0x00007f45e87977cd in _PyEval_EvalFrame () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/internal/pycore_ceval.h:89
+#19 0x00007f45e8797630 in gen_send_ex2 () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:230
+#20 0x00007f45e8798ad0 in gen_send_ex () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:274
+#21 0x00007f45e8727db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bytecodes.c:3093
+#22 0x00007f45e8864e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#23 0x00007f45e88b4770 in run_eval_code_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1722
+#24 0x00007f45e88b4840 in run_mod () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1743
+#25 0x00007f45e88b4950 in pyrun_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1643
+#26 0x00007f45e88b76b0 in _PyRun_SimpleFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:433
+#27 0x00007f45e88b7cf0 in _PyRun_AnyFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:78
+#28 0x00007f45e88da80e in pymain_run_file_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:360
+#29 0x00007f45e88da7d0 in pymain_run_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:379
+#30 0x00007f45e88d9f50 in pymain_run_python () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:633
+#31 0x00007f45e88d9f20 in Py_RunMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:713
+#32 0x00007f45e88dac20 in pymain_main () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:743
+#33 0x00007f45e88dad10 in Py_BytesMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:767
+#34 0x00007f45e8438f90 in __libc_start_main () at /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c:308
+#35 0x00005565748d6070 in _start ()
+
+[Inferior 1 (process 1460) detached]
+27      ../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:135: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  mtime = datetime.utcfromtimestamp(os.path.getmtime(filename))
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:136: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  age = datetime.utcnow() - mtime
+Saved trace to /home/nicho/.sage/crash_logs/crash_taqv4ilj.log
+------------------------------------------------------------------------
+Unhandled SIGSEGV: A segmentation fault occurred.
+This probably occurred because a *compiled* module has a bug
+in it and is not properly wrapped with sig_on(), sig_off().
+Python will now terminate.
+------------------------------------------------------------------------
+Segmentation fault
+          0x7f09e710b84a <_PyEval_EvalFrameDefault+19098>,
+          0x7f09e710dd0b <_PyEval_EvalFrameDefault+28507>,
+          0x7f09e71089fb <_PyEval_EvalFrameDefault+7243>,
+          0x7f09e7108a9e <_PyEval_EvalFrameDefault+7406>,
+          0x7f09e710b030 <_PyEval_EvalFrameDefault+17024>,
+          0x7f09e710b159 <_PyEval_EvalFrameDefault+17321>,
+          0x7f09e7109100 <_PyEval_EvalFrameDefault+9040>,
+          0x7f09e7109678 <_PyEval_EvalFrameDefault+10440>,
+          0x7f09e710eb33 <_PyEval_EvalFrameDefault+32131>,
+          0x7f09e710d650 <_PyEval_EvalFrameDefault+26784>,
+          0x7f09e710d713 <_PyEval_EvalFrameDefault+26979>,
+          0x7f09e710c5eb <_PyEval_EvalFrameDefault+22587>,
+          0x7f09e7109448 <_PyEval_EvalFrameDefault+9880>,
+          0x7f09e7108d54 <_PyEval_EvalFrameDefault+8100>,
+          0x7f09e710f3c8 <_PyEval_EvalFrameDefault+34328>,
+          0x7f09e710ae44 <_PyEval_EvalFrameDefault+16532>,
+          0x7f09e710aee1 <_PyEval_EvalFrameDefault+16689>,
+          0x7f09e710af6c <_PyEval_EvalFrameDefault+16828>,
+          0x7f09e710bb12 <_PyEval_EvalFrameDefault+19810>,
+          0x7f09e710bd3d <_PyEval_EvalFrameDefault+20365>,
+          0x7f09e710f4b0 <_PyEval_EvalFrameDefault+34560>,
+          0x7f09e710ba66 <_PyEval_EvalFrameDefault+19638>,
+          0x7f09e710c202 <_PyEval_EvalFrameDefault+21586>,
+          0x7f09e710d100 <_PyEval_EvalFrameDefault+25424>,
+          0x7f09e710b364 <_PyEval_EvalFrameDefault+17844>,
+          0x7f09e710be9e <_PyEval_EvalFrameDefault+20718>,
+          0x7f09e71097f2 <_PyEval_EvalFrameDefault+10818>,
+          0x7f09e710f33b <_PyEval_EvalFrameDefault+34187>,
+          0x7f09e710bf5d <_PyEval_EvalFrameDefault+20909>,
+          0x7f09e710b282 <_PyEval_EvalFrameDefault+17618>,
+          0x7f09e710c150 <_PyEval_EvalFrameDefault+21408>,
+          0x7f09e710c034 <_PyEval_EvalFrameDefault+21124>,
+          0x7f09e710c8ad <_PyEval_EvalFrameDefault+23293>,
+          0x7f09e710c830 <_PyEval_EvalFrameDefault+23168>,
+          0x7f09e710dc6e <_PyEval_EvalFrameDefault+28350>,
+          0x7f09e7107a02 <_PyEval_EvalFrameDefault+3154>,
+          0x7f09e7107d10 <_PyEval_EvalFrameDefault+3936>,
+          0x7f09e710c56d <_PyEval_EvalFrameDefault+22461>,
+          0x7f09e7107b87 <_PyEval_EvalFrameDefault+3543>,
+          0x7f09e710ab1f <_PyEval_EvalFrameDefault+15727>,
+          0x7f09e7107b20 <_PyEval_EvalFrameDefault+3440>,
+          0x7f09e7108ffb <_PyEval_EvalFrameDefault+8779>,
+          0x7f09e710b978 <_PyEval_EvalFrameDefault+19400>,
+          0x7f09e710ba0f <_PyEval_EvalFrameDefault+19551>,
+          0x7f09e710ac8d <_PyEval_EvalFrameDefault+16093>,
+          0x7f09e710baf7 <_PyEval_EvalFrameDefault+19783>,
+          0x7f09e710a8c7 <_PyEval_EvalFrameDefault+15127>,
+          0x7f09e710a957 <_PyEval_EvalFrameDefault+15271>,
+          0x7f09e710a9cd <_PyEval_EvalFrameDefault+15389>,
+          0x7f09e710aa48 <_PyEval_EvalFrameDefault+15512>,
+          0x7f09e710aac5 <_PyEval_EvalFrameDefault+15637>,
+          0x7f09e710f035 <_PyEval_EvalFrameDefault+33413>,
+          0x7f09e7107a67 <_PyEval_EvalFrameDefault+3255>,
+          0x7f09e710ac0e <_PyEval_EvalFrameDefault+15966>,
+          0x7f09e710a64d <_PyEval_EvalFrameDefault+14493>,
+          0x7f09e710a6bf <_PyEval_EvalFrameDefault+14607>,
+          0x7f09e710a816 <_PyEval_EvalFrameDefault+14950>,
+          0x7f09e7109d49 <_PyEval_EvalFrameDefault+12185>,
+          0x7f09e710be83 <_PyEval_EvalFrameDefault+20691>,
+          0x7f09e710dbec <_PyEval_EvalFrameDefault+28220>,
+          0x7f09e710d1f9 <_PyEval_EvalFrameDefault+25673>,
+          0x7f09e710da08 <_PyEval_EvalFrameDefault+27736>,
+          0x7f09e710dbc0 <_PyEval_EvalFrameDefault+28176>,
+          0x7f09e710a18e <_PyEval_EvalFrameDefault+13278>,
+          0x7f09e710a0dc <_PyEval_EvalFrameDefault+13100>,
+          0x7f09e710b4e8 <_PyEval_EvalFrameDefault+18232>,
+          0x7f09e7109880 <_PyEval_EvalFrameDefault+10960>,
+          0x7f09e7109913 <_PyEval_EvalFrameDefault+11107>,
+          0x7f09e710a01f <_PyEval_EvalFrameDefault+12911>,
+          0x7f09e710c663 <_PyEval_EvalFrameDefault+22707>,
+          0x7f09e710d862 <_PyEval_EvalFrameDefault+27314>,
+          0x7f09e710905b <_PyEval_EvalFrameDefault+8875>,
+          0x7f09e710d810 <_PyEval_EvalFrameDefault+27232>,
+          0x7f09e71094b7 <_PyEval_EvalFrameDefault+9991>,
+          0x7f09e710f491 <_PyEval_EvalFrameDefault+34529>,
+          0x7f09e7108386 <_PyEval_EvalFrameDefault+5590>,
+          0x7f09e7107e7a <_PyEval_EvalFrameDefault+4298>,
+          0x7f09e7107aba <_PyEval_EvalFrameDefault+3338>,
+          0x7f09e710a268 <_PyEval_EvalFrameDefault+13496>,
+          0x7f09e7107e25 <_PyEval_EvalFrameDefault+4213>,
+          0x7f09e71099a8 <_PyEval_EvalFrameDefault+11256>,
+          0x7f09e7109a14 <_PyEval_EvalFrameDefault+11364>,
+          0x7f09e7108ef9 <_PyEval_EvalFrameDefault+8521>,
+          0x7f09e710976b <_PyEval_EvalFrameDefault+10683>,
+          0x7f09e7109e30 <_PyEval_EvalFrameDefault+12416>,
+          0x7f09e710ed94 <_PyEval_EvalFrameDefault+32740>,
+          0x7f09e7109a72 <_PyEval_EvalFrameDefault+11458>,
+          0x7f09e710a2d0 <_PyEval_EvalFrameDefault+13600>,
+          0x7f09e7107dd0 <_PyEval_EvalFrameDefault+4128>,
+          0x7f09e710a43c <_PyEval_EvalFrameDefault+13964>,
+          0x7f09e710a495 <_PyEval_EvalFrameDefault+14053>,
+          0x7f09e710a339 <_PyEval_EvalFrameDefault+13705>,
+          0x7f09e710983f <_PyEval_EvalFrameDefault+10895>,
+          0x7f09e710c3b8 <_PyEval_EvalFrameDefault+22024>,
+          0x7f09e7107404 <_PyEval_EvalFrameDefault+1620>,
+          0x7f09e7107ec5 <_PyEval_EvalFrameDefault+4373>,
+          0x7f09e710eb03 <_PyEval_EvalFrameDefault+32083>,
+          0x7f09e7108888 <_PyEval_EvalFrameDefault+6872>,
+          0x7f09e7108098 <_PyEval_EvalFrameDefault+4840>,
+          0x7f09e710c334 <_PyEval_EvalFrameDefault+21892>,
+          0x7f09e710cac3 <_PyEval_EvalFrameDefault+23827>,
+          0x7f09e710a4fb <_PyEval_EvalFrameDefault+14155>,
+          0x7f09e710954e <_PyEval_EvalFrameDefault+10142>,
+          0x7f09e7107771 <_PyEval_EvalFrameDefault+2497>,
+          0x7f09e7109b04 <_PyEval_EvalFrameDefault+11604>,
+          0x7f09e710d4f7 <_PyEval_EvalFrameDefault+26439>,
+          0x7f09e7107bf6 <_PyEval_EvalFrameDefault+3654>,
+          0x7f09e710eea9 <_PyEval_EvalFrameDefault+33017>,
+          0x7f09e710c3c7 <_PyEval_EvalFrameDefault+22039>,
+          0x7f09e710a568 <_PyEval_EvalFrameDefault+14264>,
+          0x7f09e7107c75 <_PyEval_EvalFrameDefault+3781>,
+          0x7f09e710817d <_PyEval_EvalFrameDefault+5069>,
+          0x7f09e710810b <_PyEval_EvalFrameDefault+4955>,
+          0x7f09e710ad8f <_PyEval_EvalFrameDefault+16351>,
+          0x7f09e710a7a4 <_PyEval_EvalFrameDefault+14836>,
+          0x7f09e710a731 <_PyEval_EvalFrameDefault+14721>,
+          0x7f09e710c2b3 <_PyEval_EvalFrameDefault+21763>,
+          0x7f09e710c4fc <_PyEval_EvalFrameDefault+22348>,
+          0x7f09e710ace6 <_PyEval_EvalFrameDefault+16182>,
+          0x7f09e710c780 <_PyEval_EvalFrameDefault+22992>,
+          0x7f09e71095b5 <_PyEval_EvalFrameDefault+10245>,
+          0x7f09e710cb60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f09e710cb60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f09e710ca20 <_PyEval_EvalFrameDefault+23664>,
+          0x7f09e710c93d <_PyEval_EvalFrameDefault+23437>,
+          0x7f09e7108dde <_PyEval_EvalFrameDefault+8238>,
+          0x7f09e7108e58 <_PyEval_EvalFrameDefault+8360>,
+          0x7f09e710ab70 <_PyEval_EvalFrameDefault+15808>,
+          0x7f09e710a397 <_PyEval_EvalFrameDefault+13799>,
+          0x7f09e710cb60 <_PyEval_EvalFrameDefault+23984> <repeats 60 times>,
+          0x7f09e710c38e <_PyEval_EvalFrameDefault+21982>,
+          0x7f09e710e8f0 <_PyEval_EvalFrameDefault+31552>,
+          0x7f09e710e993 <_PyEval_EvalFrameDefault+31715>,
+          0x7f09e71077c0 <_PyEval_EvalFrameDefault+2576>,
+          0x7f09e710c97a <_PyEval_EvalFrameDefault+23498>,
+          0x7f09e710946b <_PyEval_EvalFrameDefault+9915>,
+          0x7f09e71094f0 <_PyEval_EvalFrameDefault+10048>,
+          0x7f09e7107400 <_PyEval_EvalFrameDefault+1616>,
+          0x7f09e710c70a <_PyEval_EvalFrameDefault+22874>,
+          0x7f09e710ec28 <_PyEval_EvalFrameDefault+32376>,
+          0x7f09e71089a8 <_PyEval_EvalFrameDefault+7160>,
+          0x7f09e710ef90 <_PyEval_EvalFrameDefault+33248>,
+          0x7f09e710ecb7 <_PyEval_EvalFrameDefault+32519>...}
+        opcode = <optimized out>
+        oparg = <optimized out>
+        cframe = {current_frame = 0x7f09e6ff03a8,
+          previous = 0x7f09e76699c8 <_PyRuntime+459976>}
+        entry_frame = {f_code = 0x7f09e686e590, previous = 0x0,
+          f_funcobj = 0x0, f_globals = 0x0,
+          f_builtins = 0x7f09e76698b8 <_PyRuntime+459704>, f_locals = 0x0,
+          frame_obj = 0x90, prev_instr = 0x7f09e686e650, stacktop = 0,
+          return_offset = 0, owner = 3 '\003', localsplus = {0x7f09e6951e40}}
+        kwnames = 0x0
+        prev_cframe = <optimized out>
+        next_instr = 0x7f0990d7118e
+        stack_pointer = <optimized out>
+        dying = <optimized out>
+#22 0x00007f09e7243f25 in PyEval_EvalCode (co=co@entry=0x7f09e6600ea0,
+    globals=globals@entry=0x7f09e6951e40, locals=locals@entry=0x7f09e6951e40)
+    at Python/ceval.c:578
+        tstate = 0x7f09e76698b8 <_PyRuntime+459704>
+        builtins = <optimized out>
+        desc = {fc_globals = 0x7f09e6951e40, fc_builtins = 0x7f09e68f4d00,
+          fc_name = 0x7f09e75ff2f0 <_PyRuntime+24048>,
+          fc_qualname = 0x7f09e75ff2f0 <_PyRuntime+24048>,
+          fc_code = 0x7f09e6600ea0, fc_defaults = 0x0, fc_kwdefaults = 0x0,
+          fc_closure = 0x0}
+        func = 0x7f09e6936200
+        res = <optimized out>
+#23 0x00007f09e72937bd in run_eval_code_obj (
+    tstate=tstate@entry=0x7f09e76698b8 <_PyRuntime+459704>,
+    co=co@entry=0x7f09e6600ea0, globals=globals@entry=0x7f09e6951e40,
+    locals=locals@entry=0x7f09e6951e40) at Python/pythonrun.c:1722
+        v = <optimized out>
+#24 0x00007f09e72938c5 in run_mod (mod=mod@entry=0x5591b2e738e0,
+    filename=filename@entry=0x7f09e6711200,
+    globals=globals@entry=0x7f09e6951e40, locals=locals@entry=0x7f09e6951e40,
+    flags=flags@entry=0x7ffc389c1f30, arena=arena@entry=0x7f09e6875830)
+    at Python/pythonrun.c:1743
+        tstate = 0x7f09e76698b8 <_PyRuntime+459704>
+        co = 0x7f09e6600ea0
+        v = <optimized out>
+#25 0x00007f09e72939cf in pyrun_file (fp=fp@entry=0x5591b2d3e490,
+    filename=filename@entry=0x7f09e6711200, start=start@entry=257,
+    globals=globals@entry=0x7f09e6951e40, locals=locals@entry=0x7f09e6951e40,
+    closeit=closeit@entry=1, flags=0x7ffc389c1f30) at Python/pythonrun.c:1643
+        arena = 0x7f09e6875830
+        mod = 0x5591b2e738e0
+        ret = <optimized out>
+#26 0x00007f09e72967de in _PyRun_SimpleFileObject (fp=fp@entry=0x5591b2d3e490,
+    filename=filename@entry=0x7f09e6711200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffc389c1f30) at Python/pythonrun.c:433
+        m = 0x7f09e692de40
+        d = 0x7f09e6951e40
+        v = <optimized out>
+        set_file_name = 1
+        ret = -1
+        pyc = <optimized out>
+#27 0x00007f09e7296d2f in _PyRun_AnyFileObject (fp=fp@entry=0x5591b2d3e490,
+    filename=filename@entry=0x7f09e6711200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffc389c1f30) at Python/pythonrun.c:78
+        decref_filename = 0
+        res = <optimized out>
+#28 0x00007f09e72b98bc in pymain_run_file_obj (skip_source_first_line=0,
+    filename=0x7f09e6711200, program_name=0x7f09e66f8750) at Modules/main.c:360
+        fp = 0x5591b2d3e490
+        sb = {st_dev = 2064, st_ino = 471274, st_nlink = 1, st_mode = 33261,
+          st_uid = 1000, st_gid = 1000, __pad0 = 0, st_rdev = 0,
+          st_size = 360, st_blksize = 4096, st_blocks = 8, st_atim = {
+            tv_sec = 1750238365, tv_nsec = 997983600}, st_mtim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, st_ctim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, __glibc_reserved = {0,
+            0, 0}}
+        cf = {cf_flags = 0, cf_feature_version = 12}
+        run = <optimized out>
+        fp = <optimized out>
+        sb = <optimized out>
+        cf = <optimized out>
+        run = <optimized out>
+        ch = <optimized out>
+#29 pymain_run_file (config=0x7f09e760c498 <_PyRuntime+77720>)
+    at Modules/main.c:379
+        filename = 0x7f09e6711200
+        program_name = 0x7f09e66f8750
+        res = <optimized out>
+        filename = <optimized out>
+        program_name = <optimized out>
+        res = <optimized out>
+#30 pymain_run_python (exitcode=0x7ffc389c1f00) at Modules/main.c:633
+        main_importer_path = <optimized out>
+        interp = 0x7f09e760bf98 <_PyRuntime+76440>
+        config = 0x7f09e760c498 <_PyRuntime+77720>
+        path0 = 0x7f09e67287b0
+        main_importer_path = <optimized out>
+        interp = <optimized out>
+        config = <optimized out>
+        path0 = <optimized out>
+        res = <optimized out>
+        _tmp_op_ptr = <optimized out>
+        _tmp_old_op = <optimized out>
+        wstr = <optimized out>
+        old_alloc = <optimized out>
+        res = <optimized out>
+#31 Py_RunMain () at Modules/main.c:713
+        exitcode = <optimized out>
+#32 0x00007f09e72b9c68 in pymain_main (args=args@entry=0x7ffc389c2040)
+    at Modules/main.c:743
+        status = {_type = _PyStatus_TYPE_OK, func = <optimized out>,
+          err_msg = <optimized out>, exitcode = 2050936064}
+#33 0x00007f09e72b9d4d in Py_BytesMain (argc=<optimized out>,
+    argv=<optimized out>) at Modules/main.c:767
+        args = {argc = 3, use_bytes_argv = 1, bytes_argv = 0x7ffc389c2168,
+          wchar_argv = 0x0}
+#34 0x00007f09e6e18083 in __libc_start_main (main=0x5591b14e9060 <main>,
+    argc=3, argv=0x7ffc389c2168, init=<optimized out>, fini=<optimized out>,
+    rtld_fini=<optimized out>, stack_end=0x7ffc389c2158)
+    at ../csu/libc-start.c:308
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {94084233335136,
+                -3707995503293694888, 94084233334896, 140721258242400, 0, 0,
+                3707303087353822296, 3646016288830061656},
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x3,
+              0x7ffc389c2168}, data = {prev = 0x0, cleanup = 0x0,
+              canceltype = 3}}}
+        not_first_call = <optimized out>
+#35 0x00005591b14e909e in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Cython backtrace
+----------------
+#0  0x00007f09e6ed6c20 in __GI___wait4 () at /build/glibc-LcI20x/glibc-2.31/posix/../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x00007f09e6ed6bf0 in __GI___waitpid () at /build/glibc-LcI20x/glibc-2.31/posix/waitpid.c:38
+#2  0x00007f09e6462079 in print_enhanced_backtrace () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:672
+#3  0x00007f09e6461ff0 in sigdie () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:698
+#4  0x00007f09e6464ef2 in sigdie_for_sig () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:256
+#5  0x00007f09e6464ed0 in cysigs_signal_handler () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:361
+#6  0x00007f09e768c3e0 in __restore_rt ()
+#7  0x00007f098ecca750 in __pyx_f_4sage_6matrix_17matrix_gf2e_dense_17Matrix_gf2e_dense_swap_rows_c () at /usr/include/m4ri/mzd.h:413
+   408     * \param M Matrix
+   409     * \param rowa Row index.
+   410     * \param rowb Row index.
+   411     */
+   412
+>  413    static inline void mzd_row_swap(mzd_t *M, rci_t const rowa, rci_t const rowb) { _mzd_row_swap(M, rowa, rowb, 0); }
+   414
+   415    /**
+   416     * \brief copy row j from A to row i from B.
+   417     *
+#8  0x00007f0997537c28 in __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:28169
+  28164            __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_cycle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28165            __Pyx_GOTREF(__pyx_t_3);
+  28166            __pyx_t_11 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_11 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28167            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28168            __pyx_t_10 = __Pyx_PyIndex_AsSsize_t(__pyx_v_elt); if (unlikely((__pyx_t_10 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+> 28169            __pyx_t_3 = ((struct __pyx_vtabstruct_4sage_6matrix_7matrix0_Matrix *)__pyx_v_temp->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->swap_rows_c(__pyx_v_temp, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28170            __Pyx_GOTREF(__pyx_t_3);
+  28171            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28172
+  28173            /* "sage/matrix/matrix0.pyx":2925
+#9  0x00007f0997537ba0 in __pyx_pw_4sage_6matrix_7matrix0_6Matrix_87with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:27858
+  27853      }
+  27854      __Pyx_AddTraceback("sage.matrix.matrix0.Matrix.with_permuted_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  27855      __Pyx_RefNannyFinishContext();
+  27856      return NULL;
+  27857      __pyx_L4_argument_unpacking_done:;
+> 27858      __pyx_r = __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_self), __pyx_v_permutation);
+  27859
+  27860      /* function exit code */
+  27861      {
+  27862        Py_ssize_t __pyx_temp;
+#10 0x00007f09e71a8230 in cfunction_vectorcall_FASTCALL_KEYWORDS () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#11 0x00007f099717da9f in __pyx_pf_4sage_6matrix_7matrix2_6Matrix_320krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:140849
+  140844        }
+  140845      }
+  140846      #endif
+  140847      {
+  140848        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_self_permutation};
+> 140849        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+  140850        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  140851        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18688, __pyx_L1_error)
+  140852        __Pyx_GOTREF(__pyx_t_6);
+  140853        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+#12 0x00007f099717d8d0 in __pyx_pw_4sage_6matrix_7matrix2_6Matrix_321krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:7974
+  7969      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_2);
+  7970      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_3);
+  7971      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form);
+  7972      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_form);
+  7973      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form_PID);
+> 7974      Py_CLEAR(clear_module_state->__pyx_kp_u_echelon_form_over);
+  7975      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place);
+  7976      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place_classical);
+  7977      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_strassen);
+  7978      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_transformation);
+#13 0x00007f09e7106db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#14 0x00007f09e7243e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#15 0x00007f09e7240955 in builtin_exec_impl () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bltinmodule.c:1096
+#16 0x00007f09e72408b0 in builtin_exec () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/clinic/bltinmodule.c.h:586
+#17 0x00007f09e7106db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#18 0x00007f09e71767cd in _PyEval_EvalFrame () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/internal/pycore_ceval.h:89
+#19 0x00007f09e7176630 in gen_send_ex2 () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:230
+#20 0x00007f09e7177ad0 in gen_send_ex () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:274
+#21 0x00007f09e7106db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bytecodes.c:3093
+#22 0x00007f09e7243e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#23 0x00007f09e7293770 in run_eval_code_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1722
+#24 0x00007f09e7293840 in run_mod () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1743
+#25 0x00007f09e7293950 in pyrun_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1643
+#26 0x00007f09e72966b0 in _PyRun_SimpleFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:433
+#27 0x00007f09e7296cf0 in _PyRun_AnyFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:78
+#28 0x00007f09e72b980e in pymain_run_file_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:360
+#29 0x00007f09e72b97d0 in pymain_run_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:379
+#30 0x00007f09e72b8f50 in pymain_run_python () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:633
+#31 0x00007f09e72b8f20 in Py_RunMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:713
+#32 0x00007f09e72b9c20 in pymain_main () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:743
+#33 0x00007f09e72b9d10 in Py_BytesMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:767
+#34 0x00007f09e6e17f90 in __libc_start_main () at /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c:308
+#35 0x00005591b14e9070 in _start ()
+
+[Inferior 1 (process 1612) detached]
+27      ../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:135: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  mtime = datetime.utcfromtimestamp(os.path.getmtime(filename))
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:136: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  age = datetime.utcnow() - mtime
+Saved trace to /home/nicho/.sage/crash_logs/crash_ornb502w.log
+------------------------------------------------------------------------
+Unhandled SIGSEGV: A segmentation fault occurred.
+This probably occurred because a *compiled* module has a bug
+in it and is not properly wrapped with sig_on(), sig_off().
+Python will now terminate.
+------------------------------------------------------------------------
+Segmentation fault
+          0x7f54a3d0584a <_PyEval_EvalFrameDefault+19098>,
+          0x7f54a3d07d0b <_PyEval_EvalFrameDefault+28507>,
+          0x7f54a3d029fb <_PyEval_EvalFrameDefault+7243>,
+          0x7f54a3d02a9e <_PyEval_EvalFrameDefault+7406>,
+          0x7f54a3d05030 <_PyEval_EvalFrameDefault+17024>,
+          0x7f54a3d05159 <_PyEval_EvalFrameDefault+17321>,
+          0x7f54a3d03100 <_PyEval_EvalFrameDefault+9040>,
+          0x7f54a3d03678 <_PyEval_EvalFrameDefault+10440>,
+          0x7f54a3d08b33 <_PyEval_EvalFrameDefault+32131>,
+          0x7f54a3d07650 <_PyEval_EvalFrameDefault+26784>,
+          0x7f54a3d07713 <_PyEval_EvalFrameDefault+26979>,
+          0x7f54a3d065eb <_PyEval_EvalFrameDefault+22587>,
+          0x7f54a3d03448 <_PyEval_EvalFrameDefault+9880>,
+          0x7f54a3d02d54 <_PyEval_EvalFrameDefault+8100>,
+          0x7f54a3d093c8 <_PyEval_EvalFrameDefault+34328>,
+          0x7f54a3d04e44 <_PyEval_EvalFrameDefault+16532>,
+          0x7f54a3d04ee1 <_PyEval_EvalFrameDefault+16689>,
+          0x7f54a3d04f6c <_PyEval_EvalFrameDefault+16828>,
+          0x7f54a3d05b12 <_PyEval_EvalFrameDefault+19810>,
+          0x7f54a3d05d3d <_PyEval_EvalFrameDefault+20365>,
+          0x7f54a3d094b0 <_PyEval_EvalFrameDefault+34560>,
+          0x7f54a3d05a66 <_PyEval_EvalFrameDefault+19638>,
+          0x7f54a3d06202 <_PyEval_EvalFrameDefault+21586>,
+          0x7f54a3d07100 <_PyEval_EvalFrameDefault+25424>,
+          0x7f54a3d05364 <_PyEval_EvalFrameDefault+17844>,
+          0x7f54a3d05e9e <_PyEval_EvalFrameDefault+20718>,
+          0x7f54a3d037f2 <_PyEval_EvalFrameDefault+10818>,
+          0x7f54a3d0933b <_PyEval_EvalFrameDefault+34187>,
+          0x7f54a3d05f5d <_PyEval_EvalFrameDefault+20909>,
+          0x7f54a3d05282 <_PyEval_EvalFrameDefault+17618>,
+          0x7f54a3d06150 <_PyEval_EvalFrameDefault+21408>,
+          0x7f54a3d06034 <_PyEval_EvalFrameDefault+21124>,
+          0x7f54a3d068ad <_PyEval_EvalFrameDefault+23293>,
+          0x7f54a3d06830 <_PyEval_EvalFrameDefault+23168>,
+          0x7f54a3d07c6e <_PyEval_EvalFrameDefault+28350>,
+          0x7f54a3d01a02 <_PyEval_EvalFrameDefault+3154>,
+          0x7f54a3d01d10 <_PyEval_EvalFrameDefault+3936>,
+          0x7f54a3d0656d <_PyEval_EvalFrameDefault+22461>,
+          0x7f54a3d01b87 <_PyEval_EvalFrameDefault+3543>,
+          0x7f54a3d04b1f <_PyEval_EvalFrameDefault+15727>,
+          0x7f54a3d01b20 <_PyEval_EvalFrameDefault+3440>,
+          0x7f54a3d02ffb <_PyEval_EvalFrameDefault+8779>,
+          0x7f54a3d05978 <_PyEval_EvalFrameDefault+19400>,
+          0x7f54a3d05a0f <_PyEval_EvalFrameDefault+19551>,
+          0x7f54a3d04c8d <_PyEval_EvalFrameDefault+16093>,
+          0x7f54a3d05af7 <_PyEval_EvalFrameDefault+19783>,
+          0x7f54a3d048c7 <_PyEval_EvalFrameDefault+15127>,
+          0x7f54a3d04957 <_PyEval_EvalFrameDefault+15271>,
+          0x7f54a3d049cd <_PyEval_EvalFrameDefault+15389>,
+          0x7f54a3d04a48 <_PyEval_EvalFrameDefault+15512>,
+          0x7f54a3d04ac5 <_PyEval_EvalFrameDefault+15637>,
+          0x7f54a3d09035 <_PyEval_EvalFrameDefault+33413>,
+          0x7f54a3d01a67 <_PyEval_EvalFrameDefault+3255>,
+          0x7f54a3d04c0e <_PyEval_EvalFrameDefault+15966>,
+          0x7f54a3d0464d <_PyEval_EvalFrameDefault+14493>,
+          0x7f54a3d046bf <_PyEval_EvalFrameDefault+14607>,
+          0x7f54a3d04816 <_PyEval_EvalFrameDefault+14950>,
+          0x7f54a3d03d49 <_PyEval_EvalFrameDefault+12185>,
+          0x7f54a3d05e83 <_PyEval_EvalFrameDefault+20691>,
+          0x7f54a3d07bec <_PyEval_EvalFrameDefault+28220>,
+          0x7f54a3d071f9 <_PyEval_EvalFrameDefault+25673>,
+          0x7f54a3d07a08 <_PyEval_EvalFrameDefault+27736>,
+          0x7f54a3d07bc0 <_PyEval_EvalFrameDefault+28176>,
+          0x7f54a3d0418e <_PyEval_EvalFrameDefault+13278>,
+          0x7f54a3d040dc <_PyEval_EvalFrameDefault+13100>,
+          0x7f54a3d054e8 <_PyEval_EvalFrameDefault+18232>,
+          0x7f54a3d03880 <_PyEval_EvalFrameDefault+10960>,
+          0x7f54a3d03913 <_PyEval_EvalFrameDefault+11107>,
+          0x7f54a3d0401f <_PyEval_EvalFrameDefault+12911>,
+          0x7f54a3d06663 <_PyEval_EvalFrameDefault+22707>,
+          0x7f54a3d07862 <_PyEval_EvalFrameDefault+27314>,
+          0x7f54a3d0305b <_PyEval_EvalFrameDefault+8875>,
+          0x7f54a3d07810 <_PyEval_EvalFrameDefault+27232>,
+          0x7f54a3d034b7 <_PyEval_EvalFrameDefault+9991>,
+          0x7f54a3d09491 <_PyEval_EvalFrameDefault+34529>,
+          0x7f54a3d02386 <_PyEval_EvalFrameDefault+5590>,
+          0x7f54a3d01e7a <_PyEval_EvalFrameDefault+4298>,
+          0x7f54a3d01aba <_PyEval_EvalFrameDefault+3338>,
+          0x7f54a3d04268 <_PyEval_EvalFrameDefault+13496>,
+          0x7f54a3d01e25 <_PyEval_EvalFrameDefault+4213>,
+          0x7f54a3d039a8 <_PyEval_EvalFrameDefault+11256>,
+          0x7f54a3d03a14 <_PyEval_EvalFrameDefault+11364>,
+          0x7f54a3d02ef9 <_PyEval_EvalFrameDefault+8521>,
+          0x7f54a3d0376b <_PyEval_EvalFrameDefault+10683>,
+          0x7f54a3d03e30 <_PyEval_EvalFrameDefault+12416>,
+          0x7f54a3d08d94 <_PyEval_EvalFrameDefault+32740>,
+          0x7f54a3d03a72 <_PyEval_EvalFrameDefault+11458>,
+          0x7f54a3d042d0 <_PyEval_EvalFrameDefault+13600>,
+          0x7f54a3d01dd0 <_PyEval_EvalFrameDefault+4128>,
+          0x7f54a3d0443c <_PyEval_EvalFrameDefault+13964>,
+          0x7f54a3d04495 <_PyEval_EvalFrameDefault+14053>,
+          0x7f54a3d04339 <_PyEval_EvalFrameDefault+13705>,
+          0x7f54a3d0383f <_PyEval_EvalFrameDefault+10895>,
+          0x7f54a3d063b8 <_PyEval_EvalFrameDefault+22024>,
+          0x7f54a3d01404 <_PyEval_EvalFrameDefault+1620>,
+          0x7f54a3d01ec5 <_PyEval_EvalFrameDefault+4373>,
+          0x7f54a3d08b03 <_PyEval_EvalFrameDefault+32083>,
+          0x7f54a3d02888 <_PyEval_EvalFrameDefault+6872>,
+          0x7f54a3d02098 <_PyEval_EvalFrameDefault+4840>,
+          0x7f54a3d06334 <_PyEval_EvalFrameDefault+21892>,
+          0x7f54a3d06ac3 <_PyEval_EvalFrameDefault+23827>,
+          0x7f54a3d044fb <_PyEval_EvalFrameDefault+14155>,
+          0x7f54a3d0354e <_PyEval_EvalFrameDefault+10142>,
+          0x7f54a3d01771 <_PyEval_EvalFrameDefault+2497>,
+          0x7f54a3d03b04 <_PyEval_EvalFrameDefault+11604>,
+          0x7f54a3d074f7 <_PyEval_EvalFrameDefault+26439>,
+          0x7f54a3d01bf6 <_PyEval_EvalFrameDefault+3654>,
+          0x7f54a3d08ea9 <_PyEval_EvalFrameDefault+33017>,
+          0x7f54a3d063c7 <_PyEval_EvalFrameDefault+22039>,
+          0x7f54a3d04568 <_PyEval_EvalFrameDefault+14264>,
+          0x7f54a3d01c75 <_PyEval_EvalFrameDefault+3781>,
+          0x7f54a3d0217d <_PyEval_EvalFrameDefault+5069>,
+          0x7f54a3d0210b <_PyEval_EvalFrameDefault+4955>,
+          0x7f54a3d04d8f <_PyEval_EvalFrameDefault+16351>,
+          0x7f54a3d047a4 <_PyEval_EvalFrameDefault+14836>,
+          0x7f54a3d04731 <_PyEval_EvalFrameDefault+14721>,
+          0x7f54a3d062b3 <_PyEval_EvalFrameDefault+21763>,
+          0x7f54a3d064fc <_PyEval_EvalFrameDefault+22348>,
+          0x7f54a3d04ce6 <_PyEval_EvalFrameDefault+16182>,
+          0x7f54a3d06780 <_PyEval_EvalFrameDefault+22992>,
+          0x7f54a3d035b5 <_PyEval_EvalFrameDefault+10245>,
+          0x7f54a3d06b60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f54a3d06b60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f54a3d06a20 <_PyEval_EvalFrameDefault+23664>,
+          0x7f54a3d0693d <_PyEval_EvalFrameDefault+23437>,
+          0x7f54a3d02dde <_PyEval_EvalFrameDefault+8238>,
+          0x7f54a3d02e58 <_PyEval_EvalFrameDefault+8360>,
+          0x7f54a3d04b70 <_PyEval_EvalFrameDefault+15808>,
+          0x7f54a3d04397 <_PyEval_EvalFrameDefault+13799>,
+          0x7f54a3d06b60 <_PyEval_EvalFrameDefault+23984> <repeats 60 times>,
+          0x7f54a3d0638e <_PyEval_EvalFrameDefault+21982>,
+          0x7f54a3d088f0 <_PyEval_EvalFrameDefault+31552>,
+          0x7f54a3d08993 <_PyEval_EvalFrameDefault+31715>,
+          0x7f54a3d017c0 <_PyEval_EvalFrameDefault+2576>,
+          0x7f54a3d0697a <_PyEval_EvalFrameDefault+23498>,
+          0x7f54a3d0346b <_PyEval_EvalFrameDefault+9915>,
+          0x7f54a3d034f0 <_PyEval_EvalFrameDefault+10048>,
+          0x7f54a3d01400 <_PyEval_EvalFrameDefault+1616>,
+          0x7f54a3d0670a <_PyEval_EvalFrameDefault+22874>,
+          0x7f54a3d08c28 <_PyEval_EvalFrameDefault+32376>,
+          0x7f54a3d029a8 <_PyEval_EvalFrameDefault+7160>,
+          0x7f54a3d08f90 <_PyEval_EvalFrameDefault+33248>,
+          0x7f54a3d08cb7 <_PyEval_EvalFrameDefault+32519>...}
+        opcode = <optimized out>
+        oparg = <optimized out>
+        cframe = {current_frame = 0x7f54a3bea3a8,
+          previous = 0x7f54a42639c8 <_PyRuntime+459976>}
+        entry_frame = {f_code = 0x7f54a3466590, previous = 0x0,
+          f_funcobj = 0x0, f_globals = 0x0,
+          f_builtins = 0x7f54a42638b8 <_PyRuntime+459704>, f_locals = 0x0,
+          frame_obj = 0x90, prev_instr = 0x7f54a3466650, stacktop = 0,
+          return_offset = 0, owner = 3 '\003', localsplus = {0x7f54a3549e80}}
+        kwnames = 0x0
+        prev_cframe = <optimized out>
+        next_instr = 0x7f544d94518e
+        stack_pointer = <optimized out>
+        dying = <optimized out>
+#22 0x00007f54a3e3df25 in PyEval_EvalCode (co=co@entry=0x7f54a31fcea0,
+    globals=globals@entry=0x7f54a3549e80, locals=locals@entry=0x7f54a3549e80)
+    at Python/ceval.c:578
+        tstate = 0x7f54a42638b8 <_PyRuntime+459704>
+        builtins = <optimized out>
+        desc = {fc_globals = 0x7f54a3549e80, fc_builtins = 0x7f54a34ecd00,
+          fc_name = 0x7f54a41f92f0 <_PyRuntime+24048>,
+          fc_qualname = 0x7f54a41f92f0 <_PyRuntime+24048>,
+          fc_code = 0x7f54a31fcea0, fc_defaults = 0x0, fc_kwdefaults = 0x0,
+          fc_closure = 0x0}
+        func = 0x7f54a352e200
+        res = <optimized out>
+#23 0x00007f54a3e8d7bd in run_eval_code_obj (
+    tstate=tstate@entry=0x7f54a42638b8 <_PyRuntime+459704>,
+    co=co@entry=0x7f54a31fcea0, globals=globals@entry=0x7f54a3549e80,
+    locals=locals@entry=0x7f54a3549e80) at Python/pythonrun.c:1722
+        v = <optimized out>
+#24 0x00007f54a3e8d8c5 in run_mod (mod=mod@entry=0x55f7ed9358e0,
+    filename=filename@entry=0x7f54a3309200,
+    globals=globals@entry=0x7f54a3549e80, locals=locals@entry=0x7f54a3549e80,
+    flags=flags@entry=0x7ffc94cbe1e0, arena=arena@entry=0x7f54a346d830)
+    at Python/pythonrun.c:1743
+        tstate = 0x7f54a42638b8 <_PyRuntime+459704>
+        co = 0x7f54a31fcea0
+        v = <optimized out>
+#25 0x00007f54a3e8d9cf in pyrun_file (fp=fp@entry=0x55f7ed800490,
+    filename=filename@entry=0x7f54a3309200, start=start@entry=257,
+    globals=globals@entry=0x7f54a3549e80, locals=locals@entry=0x7f54a3549e80,
+    closeit=closeit@entry=1, flags=0x7ffc94cbe1e0) at Python/pythonrun.c:1643
+        arena = 0x7f54a346d830
+        mod = 0x55f7ed9358e0
+        ret = <optimized out>
+#26 0x00007f54a3e907de in _PyRun_SimpleFileObject (fp=fp@entry=0x55f7ed800490,
+    filename=filename@entry=0x7f54a3309200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffc94cbe1e0) at Python/pythonrun.c:433
+        m = 0x7f54a3525e40
+        d = 0x7f54a3549e80
+        v = <optimized out>
+        set_file_name = 1
+        ret = -1
+        pyc = <optimized out>
+#27 0x00007f54a3e90d2f in _PyRun_AnyFileObject (fp=fp@entry=0x55f7ed800490,
+    filename=filename@entry=0x7f54a3309200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffc94cbe1e0) at Python/pythonrun.c:78
+        decref_filename = 0
+        res = <optimized out>
+#28 0x00007f54a3eb38bc in pymain_run_file_obj (skip_source_first_line=0,
+    filename=0x7f54a3309200, program_name=0x7f54a354c720) at Modules/main.c:360
+        fp = 0x55f7ed800490
+        sb = {st_dev = 2064, st_ino = 471274, st_nlink = 1, st_mode = 33261,
+          st_uid = 1000, st_gid = 1000, __pad0 = 0, st_rdev = 0,
+          st_size = 360, st_blksize = 4096, st_blocks = 8, st_atim = {
+            tv_sec = 1750238365, tv_nsec = 997983600}, st_mtim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, st_ctim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, __glibc_reserved = {0,
+            0, 0}}
+        cf = {cf_flags = 0, cf_feature_version = 12}
+        run = <optimized out>
+        fp = <optimized out>
+        sb = <optimized out>
+        cf = <optimized out>
+        run = <optimized out>
+        ch = <optimized out>
+#29 pymain_run_file (config=0x7f54a4206498 <_PyRuntime+77720>)
+    at Modules/main.c:379
+        filename = 0x7f54a3309200
+        program_name = 0x7f54a354c720
+        res = <optimized out>
+        filename = <optimized out>
+        program_name = <optimized out>
+        res = <optimized out>
+#30 pymain_run_python (exitcode=0x7ffc94cbe1b0) at Modules/main.c:633
+        main_importer_path = <optimized out>
+        interp = 0x7f54a4205f98 <_PyRuntime+76440>
+        config = 0x7f54a4206498 <_PyRuntime+77720>
+        path0 = 0x7f54a33207b0
+        main_importer_path = <optimized out>
+        interp = <optimized out>
+        config = <optimized out>
+        path0 = <optimized out>
+        res = <optimized out>
+        _tmp_op_ptr = <optimized out>
+        _tmp_old_op = <optimized out>
+        wstr = <optimized out>
+        old_alloc = <optimized out>
+        res = <optimized out>
+#31 Py_RunMain () at Modules/main.c:713
+        exitcode = <optimized out>
+#32 0x00007f54a3eb3c68 in pymain_main (args=args@entry=0x7ffc94cbe2f0)
+    at Modules/main.c:743
+        status = {_type = _PyStatus_TYPE_OK, func = <optimized out>,
+          err_msg = <optimized out>, exitcode = -2111189248}
+#33 0x00007f54a3eb3d4d in Py_BytesMain (argc=<optimized out>,
+    argv=<optimized out>) at Modules/main.c:767
+        args = {argc = 3, use_bytes_argv = 1, bytes_argv = 0x7ffc94cbe418,
+          wchar_argv = 0x0}
+#34 0x00007f54a3a12083 in __libc_start_main (main=0x55f7ebd77060 <main>,
+    argc=3, argv=0x7ffc94cbe418, init=<optimized out>, fini=<optimized out>,
+    rtld_fini=<optimized out>, stack_end=0x7ffc94cbe408)
+    at ../csu/libc-start.c:308
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {94523302048096,
+                -7548151672243228314, 94523302047856, 140722804876304, 0, 0,
+                7549930303168180582, 7608500933143949670},
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x3,
+              0x7ffc94cbe418}, data = {prev = 0x0, cleanup = 0x0,
+              canceltype = 3}}}
+        not_first_call = <optimized out>
+#35 0x000055f7ebd7709e in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Cython backtrace
+----------------
+#0  0x00007f54a3ad0c20 in __GI___wait4 () at /build/glibc-LcI20x/glibc-2.31/posix/../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x00007f54a3ad0bf0 in __GI___waitpid () at /build/glibc-LcI20x/glibc-2.31/posix/waitpid.c:38
+#2  0x00007f54a305c079 in print_enhanced_backtrace () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:672
+#3  0x00007f54a305bff0 in sigdie () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:698
+#4  0x00007f54a305eef2 in sigdie_for_sig () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:256
+#5  0x00007f54a305eed0 in cysigs_signal_handler () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:361
+#6  0x00007f54a42863e0 in __restore_rt ()
+#7  0x00007f544b8c4750 in __pyx_f_4sage_6matrix_17matrix_gf2e_dense_17Matrix_gf2e_dense_swap_rows_c () at /usr/include/m4ri/mzd.h:413
+   408     * \param M Matrix
+   409     * \param rowa Row index.
+   410     * \param rowb Row index.
+   411     */
+   412
+>  413    static inline void mzd_row_swap(mzd_t *M, rci_t const rowa, rci_t const rowb) { _mzd_row_swap(M, rowa, rowb, 0); }
+   414
+   415    /**
+   416     * \brief copy row j from A to row i from B.
+   417     *
+#8  0x00007f5454131c28 in __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:28169
+  28164            __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_cycle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28165            __Pyx_GOTREF(__pyx_t_3);
+  28166            __pyx_t_11 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_11 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28167            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28168            __pyx_t_10 = __Pyx_PyIndex_AsSsize_t(__pyx_v_elt); if (unlikely((__pyx_t_10 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+> 28169            __pyx_t_3 = ((struct __pyx_vtabstruct_4sage_6matrix_7matrix0_Matrix *)__pyx_v_temp->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->swap_rows_c(__pyx_v_temp, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28170            __Pyx_GOTREF(__pyx_t_3);
+  28171            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28172
+  28173            /* "sage/matrix/matrix0.pyx":2925
+#9  0x00007f5454131ba0 in __pyx_pw_4sage_6matrix_7matrix0_6Matrix_87with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:27858
+  27853      }
+  27854      __Pyx_AddTraceback("sage.matrix.matrix0.Matrix.with_permuted_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  27855      __Pyx_RefNannyFinishContext();
+  27856      return NULL;
+  27857      __pyx_L4_argument_unpacking_done:;
+> 27858      __pyx_r = __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_self), __pyx_v_permutation);
+  27859
+  27860      /* function exit code */
+  27861      {
+  27862        Py_ssize_t __pyx_temp;
+#10 0x00007f54a3da2230 in cfunction_vectorcall_FASTCALL_KEYWORDS () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#11 0x00007f5453d77a9f in __pyx_pf_4sage_6matrix_7matrix2_6Matrix_320krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:140849
+  140844        }
+  140845      }
+  140846      #endif
+  140847      {
+  140848        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_self_permutation};
+> 140849        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+  140850        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  140851        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18688, __pyx_L1_error)
+  140852        __Pyx_GOTREF(__pyx_t_6);
+  140853        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+#12 0x00007f5453d778d0 in __pyx_pw_4sage_6matrix_7matrix2_6Matrix_321krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:7974
+  7969      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_2);
+  7970      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_3);
+  7971      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form);
+  7972      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_form);
+  7973      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form_PID);
+> 7974      Py_CLEAR(clear_module_state->__pyx_kp_u_echelon_form_over);
+  7975      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place);
+  7976      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place_classical);
+  7977      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_strassen);
+  7978      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_transformation);
+#13 0x00007f54a3d00db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#14 0x00007f54a3e3de70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#15 0x00007f54a3e3a955 in builtin_exec_impl () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bltinmodule.c:1096
+#16 0x00007f54a3e3a8b0 in builtin_exec () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/clinic/bltinmodule.c.h:586
+#17 0x00007f54a3d00db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#18 0x00007f54a3d707cd in _PyEval_EvalFrame () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/internal/pycore_ceval.h:89
+#19 0x00007f54a3d70630 in gen_send_ex2 () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:230
+#20 0x00007f54a3d71ad0 in gen_send_ex () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:274
+#21 0x00007f54a3d00db0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bytecodes.c:3093
+#22 0x00007f54a3e3de70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#23 0x00007f54a3e8d770 in run_eval_code_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1722
+#24 0x00007f54a3e8d840 in run_mod () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1743
+#25 0x00007f54a3e8d950 in pyrun_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1643
+#26 0x00007f54a3e906b0 in _PyRun_SimpleFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:433
+#27 0x00007f54a3e90cf0 in _PyRun_AnyFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:78
+#28 0x00007f54a3eb380e in pymain_run_file_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:360
+#29 0x00007f54a3eb37d0 in pymain_run_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:379
+#30 0x00007f54a3eb2f50 in pymain_run_python () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:633
+#31 0x00007f54a3eb2f20 in Py_RunMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:713
+#32 0x00007f54a3eb3c20 in pymain_main () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:743
+#33 0x00007f54a3eb3d10 in Py_BytesMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:767
+#34 0x00007f54a3a11f90 in __libc_start_main () at /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c:308
+#35 0x000055f7ebd77070 in _start ()
+
+[Inferior 1 (process 1759) detached]
+27      ../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:135: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  mtime = datetime.utcfromtimestamp(os.path.getmtime(filename))
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:136: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  age = datetime.utcnow() - mtime
+Saved trace to /home/nicho/.sage/crash_logs/crash_f5_n2p18.log
+------------------------------------------------------------------------
+Unhandled SIGSEGV: A segmentation fault occurred.
+This probably occurred because a *compiled* module has a bug
+in it and is not properly wrapped with sig_on(), sig_off().
+Python will now terminate.
+------------------------------------------------------------------------
+Segmentation fault
+          0x7f8e676a084a <_PyEval_EvalFrameDefault+19098>,
+          0x7f8e676a2d0b <_PyEval_EvalFrameDefault+28507>,
+          0x7f8e6769d9fb <_PyEval_EvalFrameDefault+7243>,
+          0x7f8e6769da9e <_PyEval_EvalFrameDefault+7406>,
+          0x7f8e676a0030 <_PyEval_EvalFrameDefault+17024>,
+          0x7f8e676a0159 <_PyEval_EvalFrameDefault+17321>,
+          0x7f8e6769e100 <_PyEval_EvalFrameDefault+9040>,
+          0x7f8e6769e678 <_PyEval_EvalFrameDefault+10440>,
+          0x7f8e676a3b33 <_PyEval_EvalFrameDefault+32131>,
+          0x7f8e676a2650 <_PyEval_EvalFrameDefault+26784>,
+          0x7f8e676a2713 <_PyEval_EvalFrameDefault+26979>,
+          0x7f8e676a15eb <_PyEval_EvalFrameDefault+22587>,
+          0x7f8e6769e448 <_PyEval_EvalFrameDefault+9880>,
+          0x7f8e6769dd54 <_PyEval_EvalFrameDefault+8100>,
+          0x7f8e676a43c8 <_PyEval_EvalFrameDefault+34328>,
+          0x7f8e6769fe44 <_PyEval_EvalFrameDefault+16532>,
+          0x7f8e6769fee1 <_PyEval_EvalFrameDefault+16689>,
+          0x7f8e6769ff6c <_PyEval_EvalFrameDefault+16828>,
+          0x7f8e676a0b12 <_PyEval_EvalFrameDefault+19810>,
+          0x7f8e676a0d3d <_PyEval_EvalFrameDefault+20365>,
+          0x7f8e676a44b0 <_PyEval_EvalFrameDefault+34560>,
+          0x7f8e676a0a66 <_PyEval_EvalFrameDefault+19638>,
+          0x7f8e676a1202 <_PyEval_EvalFrameDefault+21586>,
+          0x7f8e676a2100 <_PyEval_EvalFrameDefault+25424>,
+          0x7f8e676a0364 <_PyEval_EvalFrameDefault+17844>,
+          0x7f8e676a0e9e <_PyEval_EvalFrameDefault+20718>,
+          0x7f8e6769e7f2 <_PyEval_EvalFrameDefault+10818>,
+          0x7f8e676a433b <_PyEval_EvalFrameDefault+34187>,
+          0x7f8e676a0f5d <_PyEval_EvalFrameDefault+20909>,
+          0x7f8e676a0282 <_PyEval_EvalFrameDefault+17618>,
+          0x7f8e676a1150 <_PyEval_EvalFrameDefault+21408>,
+          0x7f8e676a1034 <_PyEval_EvalFrameDefault+21124>,
+          0x7f8e676a18ad <_PyEval_EvalFrameDefault+23293>,
+          0x7f8e676a1830 <_PyEval_EvalFrameDefault+23168>,
+          0x7f8e676a2c6e <_PyEval_EvalFrameDefault+28350>,
+          0x7f8e6769ca02 <_PyEval_EvalFrameDefault+3154>,
+          0x7f8e6769cd10 <_PyEval_EvalFrameDefault+3936>,
+          0x7f8e676a156d <_PyEval_EvalFrameDefault+22461>,
+          0x7f8e6769cb87 <_PyEval_EvalFrameDefault+3543>,
+          0x7f8e6769fb1f <_PyEval_EvalFrameDefault+15727>,
+          0x7f8e6769cb20 <_PyEval_EvalFrameDefault+3440>,
+          0x7f8e6769dffb <_PyEval_EvalFrameDefault+8779>,
+          0x7f8e676a0978 <_PyEval_EvalFrameDefault+19400>,
+          0x7f8e676a0a0f <_PyEval_EvalFrameDefault+19551>,
+          0x7f8e6769fc8d <_PyEval_EvalFrameDefault+16093>,
+          0x7f8e676a0af7 <_PyEval_EvalFrameDefault+19783>,
+          0x7f8e6769f8c7 <_PyEval_EvalFrameDefault+15127>,
+          0x7f8e6769f957 <_PyEval_EvalFrameDefault+15271>,
+          0x7f8e6769f9cd <_PyEval_EvalFrameDefault+15389>,
+          0x7f8e6769fa48 <_PyEval_EvalFrameDefault+15512>,
+          0x7f8e6769fac5 <_PyEval_EvalFrameDefault+15637>,
+          0x7f8e676a4035 <_PyEval_EvalFrameDefault+33413>,
+          0x7f8e6769ca67 <_PyEval_EvalFrameDefault+3255>,
+          0x7f8e6769fc0e <_PyEval_EvalFrameDefault+15966>,
+          0x7f8e6769f64d <_PyEval_EvalFrameDefault+14493>,
+          0x7f8e6769f6bf <_PyEval_EvalFrameDefault+14607>,
+          0x7f8e6769f816 <_PyEval_EvalFrameDefault+14950>,
+          0x7f8e6769ed49 <_PyEval_EvalFrameDefault+12185>,
+          0x7f8e676a0e83 <_PyEval_EvalFrameDefault+20691>,
+          0x7f8e676a2bec <_PyEval_EvalFrameDefault+28220>,
+          0x7f8e676a21f9 <_PyEval_EvalFrameDefault+25673>,
+          0x7f8e676a2a08 <_PyEval_EvalFrameDefault+27736>,
+          0x7f8e676a2bc0 <_PyEval_EvalFrameDefault+28176>,
+          0x7f8e6769f18e <_PyEval_EvalFrameDefault+13278>,
+          0x7f8e6769f0dc <_PyEval_EvalFrameDefault+13100>,
+          0x7f8e676a04e8 <_PyEval_EvalFrameDefault+18232>,
+          0x7f8e6769e880 <_PyEval_EvalFrameDefault+10960>,
+          0x7f8e6769e913 <_PyEval_EvalFrameDefault+11107>,
+          0x7f8e6769f01f <_PyEval_EvalFrameDefault+12911>,
+          0x7f8e676a1663 <_PyEval_EvalFrameDefault+22707>,
+          0x7f8e676a2862 <_PyEval_EvalFrameDefault+27314>,
+          0x7f8e6769e05b <_PyEval_EvalFrameDefault+8875>,
+          0x7f8e676a2810 <_PyEval_EvalFrameDefault+27232>,
+          0x7f8e6769e4b7 <_PyEval_EvalFrameDefault+9991>,
+          0x7f8e676a4491 <_PyEval_EvalFrameDefault+34529>,
+          0x7f8e6769d386 <_PyEval_EvalFrameDefault+5590>,
+          0x7f8e6769ce7a <_PyEval_EvalFrameDefault+4298>,
+          0x7f8e6769caba <_PyEval_EvalFrameDefault+3338>,
+          0x7f8e6769f268 <_PyEval_EvalFrameDefault+13496>,
+          0x7f8e6769ce25 <_PyEval_EvalFrameDefault+4213>,
+          0x7f8e6769e9a8 <_PyEval_EvalFrameDefault+11256>,
+          0x7f8e6769ea14 <_PyEval_EvalFrameDefault+11364>,
+          0x7f8e6769def9 <_PyEval_EvalFrameDefault+8521>,
+          0x7f8e6769e76b <_PyEval_EvalFrameDefault+10683>,
+          0x7f8e6769ee30 <_PyEval_EvalFrameDefault+12416>,
+          0x7f8e676a3d94 <_PyEval_EvalFrameDefault+32740>,
+          0x7f8e6769ea72 <_PyEval_EvalFrameDefault+11458>,
+          0x7f8e6769f2d0 <_PyEval_EvalFrameDefault+13600>,
+          0x7f8e6769cdd0 <_PyEval_EvalFrameDefault+4128>,
+          0x7f8e6769f43c <_PyEval_EvalFrameDefault+13964>,
+          0x7f8e6769f495 <_PyEval_EvalFrameDefault+14053>,
+          0x7f8e6769f339 <_PyEval_EvalFrameDefault+13705>,
+          0x7f8e6769e83f <_PyEval_EvalFrameDefault+10895>,
+          0x7f8e676a13b8 <_PyEval_EvalFrameDefault+22024>,
+          0x7f8e6769c404 <_PyEval_EvalFrameDefault+1620>,
+          0x7f8e6769cec5 <_PyEval_EvalFrameDefault+4373>,
+          0x7f8e676a3b03 <_PyEval_EvalFrameDefault+32083>,
+          0x7f8e6769d888 <_PyEval_EvalFrameDefault+6872>,
+          0x7f8e6769d098 <_PyEval_EvalFrameDefault+4840>,
+          0x7f8e676a1334 <_PyEval_EvalFrameDefault+21892>,
+          0x7f8e676a1ac3 <_PyEval_EvalFrameDefault+23827>,
+          0x7f8e6769f4fb <_PyEval_EvalFrameDefault+14155>,
+          0x7f8e6769e54e <_PyEval_EvalFrameDefault+10142>,
+          0x7f8e6769c771 <_PyEval_EvalFrameDefault+2497>,
+          0x7f8e6769eb04 <_PyEval_EvalFrameDefault+11604>,
+          0x7f8e676a24f7 <_PyEval_EvalFrameDefault+26439>,
+          0x7f8e6769cbf6 <_PyEval_EvalFrameDefault+3654>,
+          0x7f8e676a3ea9 <_PyEval_EvalFrameDefault+33017>,
+          0x7f8e676a13c7 <_PyEval_EvalFrameDefault+22039>,
+          0x7f8e6769f568 <_PyEval_EvalFrameDefault+14264>,
+          0x7f8e6769cc75 <_PyEval_EvalFrameDefault+3781>,
+          0x7f8e6769d17d <_PyEval_EvalFrameDefault+5069>,
+          0x7f8e6769d10b <_PyEval_EvalFrameDefault+4955>,
+          0x7f8e6769fd8f <_PyEval_EvalFrameDefault+16351>,
+          0x7f8e6769f7a4 <_PyEval_EvalFrameDefault+14836>,
+          0x7f8e6769f731 <_PyEval_EvalFrameDefault+14721>,
+          0x7f8e676a12b3 <_PyEval_EvalFrameDefault+21763>,
+          0x7f8e676a14fc <_PyEval_EvalFrameDefault+22348>,
+          0x7f8e6769fce6 <_PyEval_EvalFrameDefault+16182>,
+          0x7f8e676a1780 <_PyEval_EvalFrameDefault+22992>,
+          0x7f8e6769e5b5 <_PyEval_EvalFrameDefault+10245>,
+          0x7f8e676a1b60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f8e676a1b60 <_PyEval_EvalFrameDefault+23984>,
+          0x7f8e676a1a20 <_PyEval_EvalFrameDefault+23664>,
+          0x7f8e676a193d <_PyEval_EvalFrameDefault+23437>,
+          0x7f8e6769ddde <_PyEval_EvalFrameDefault+8238>,
+          0x7f8e6769de58 <_PyEval_EvalFrameDefault+8360>,
+          0x7f8e6769fb70 <_PyEval_EvalFrameDefault+15808>,
+          0x7f8e6769f397 <_PyEval_EvalFrameDefault+13799>,
+          0x7f8e676a1b60 <_PyEval_EvalFrameDefault+23984> <repeats 60 times>,
+          0x7f8e676a138e <_PyEval_EvalFrameDefault+21982>,
+          0x7f8e676a38f0 <_PyEval_EvalFrameDefault+31552>,
+          0x7f8e676a3993 <_PyEval_EvalFrameDefault+31715>,
+          0x7f8e6769c7c0 <_PyEval_EvalFrameDefault+2576>,
+          0x7f8e676a197a <_PyEval_EvalFrameDefault+23498>,
+          0x7f8e6769e46b <_PyEval_EvalFrameDefault+9915>,
+          0x7f8e6769e4f0 <_PyEval_EvalFrameDefault+10048>,
+          0x7f8e6769c400 <_PyEval_EvalFrameDefault+1616>,
+          0x7f8e676a170a <_PyEval_EvalFrameDefault+22874>,
+          0x7f8e676a3c28 <_PyEval_EvalFrameDefault+32376>,
+          0x7f8e6769d9a8 <_PyEval_EvalFrameDefault+7160>,
+          0x7f8e676a3f90 <_PyEval_EvalFrameDefault+33248>,
+          0x7f8e676a3cb7 <_PyEval_EvalFrameDefault+32519>...}
+        opcode = <optimized out>
+        oparg = <optimized out>
+        cframe = {current_frame = 0x7f8e675853a8,
+          previous = 0x7f8e67bfe9c8 <_PyRuntime+459976>}
+        entry_frame = {f_code = 0x7f8e66e02590, previous = 0x0,
+          f_funcobj = 0x0, f_globals = 0x0,
+          f_builtins = 0x7f8e67bfe8b8 <_PyRuntime+459704>, f_locals = 0x0,
+          frame_obj = 0x90, prev_instr = 0x7f8e66e02650, stacktop = 0,
+          return_offset = 0, owner = 3 '\003', localsplus = {0x7f8e66ee5e80}}
+        kwnames = 0x0
+        prev_cframe = <optimized out>
+        next_instr = 0x7f8e1130118e
+        stack_pointer = <optimized out>
+        dying = <optimized out>
+#22 0x00007f8e677d8f25 in PyEval_EvalCode (co=co@entry=0x7f8e66b9cea0,
+    globals=globals@entry=0x7f8e66ee5e80, locals=locals@entry=0x7f8e66ee5e80)
+    at Python/ceval.c:578
+        tstate = 0x7f8e67bfe8b8 <_PyRuntime+459704>
+        builtins = <optimized out>
+        desc = {fc_globals = 0x7f8e66ee5e80, fc_builtins = 0x7f8e66e88d00,
+          fc_name = 0x7f8e67b942f0 <_PyRuntime+24048>,
+          fc_qualname = 0x7f8e67b942f0 <_PyRuntime+24048>,
+          fc_code = 0x7f8e66b9cea0, fc_defaults = 0x0, fc_kwdefaults = 0x0,
+          fc_closure = 0x0}
+        func = 0x7f8e66eca200
+        res = <optimized out>
+#23 0x00007f8e678287bd in run_eval_code_obj (
+    tstate=tstate@entry=0x7f8e67bfe8b8 <_PyRuntime+459704>,
+    co=co@entry=0x7f8e66b9cea0, globals=globals@entry=0x7f8e66ee5e80,
+    locals=locals@entry=0x7f8e66ee5e80) at Python/pythonrun.c:1722
+        v = <optimized out>
+#24 0x00007f8e678288c5 in run_mod (mod=mod@entry=0x563fea1628e0,
+    filename=filename@entry=0x7f8e66ca9200,
+    globals=globals@entry=0x7f8e66ee5e80, locals=locals@entry=0x7f8e66ee5e80,
+    flags=flags@entry=0x7ffdf2e2e620, arena=arena@entry=0x7f8e66e09830)
+    at Python/pythonrun.c:1743
+        tstate = 0x7f8e67bfe8b8 <_PyRuntime+459704>
+        co = 0x7f8e66b9cea0
+        v = <optimized out>
+#25 0x00007f8e678289cf in pyrun_file (fp=fp@entry=0x563fea02d490,
+    filename=filename@entry=0x7f8e66ca9200, start=start@entry=257,
+    globals=globals@entry=0x7f8e66ee5e80, locals=locals@entry=0x7f8e66ee5e80,
+    closeit=closeit@entry=1, flags=0x7ffdf2e2e620) at Python/pythonrun.c:1643
+        arena = 0x7f8e66e09830
+        mod = 0x563fea1628e0
+        ret = <optimized out>
+#26 0x00007f8e6782b7de in _PyRun_SimpleFileObject (fp=fp@entry=0x563fea02d490,
+    filename=filename@entry=0x7f8e66ca9200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffdf2e2e620) at Python/pythonrun.c:433
+        m = 0x7f8e66ec1e40
+        d = 0x7f8e66ee5e80
+        v = <optimized out>
+        set_file_name = 1
+        ret = -1
+        pyc = <optimized out>
+#27 0x00007f8e6782bd2f in _PyRun_AnyFileObject (fp=fp@entry=0x563fea02d490,
+    filename=filename@entry=0x7f8e66ca9200, closeit=closeit@entry=1,
+    flags=flags@entry=0x7ffdf2e2e620) at Python/pythonrun.c:78
+        decref_filename = 0
+        res = <optimized out>
+#28 0x00007f8e6784e8bc in pymain_run_file_obj (skip_source_first_line=0,
+    filename=0x7f8e66ca9200, program_name=0x7f8e66c90780) at Modules/main.c:360
+        fp = 0x563fea02d490
+        sb = {st_dev = 2064, st_ino = 471274, st_nlink = 1, st_mode = 33261,
+          st_uid = 1000, st_gid = 1000, __pad0 = 0, st_rdev = 0,
+          st_size = 360, st_blksize = 4096, st_blocks = 8, st_atim = {
+            tv_sec = 1750238365, tv_nsec = 997983600}, st_mtim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, st_ctim = {
+            tv_sec = 1741357770, tv_nsec = 851895300}, __glibc_reserved = {0,
+            0, 0}}
+        cf = {cf_flags = 0, cf_feature_version = 12}
+        run = <optimized out>
+        fp = <optimized out>
+        sb = <optimized out>
+        cf = <optimized out>
+        run = <optimized out>
+        ch = <optimized out>
+#29 pymain_run_file (config=0x7f8e67ba1498 <_PyRuntime+77720>)
+    at Modules/main.c:379
+        filename = 0x7f8e66ca9200
+        program_name = 0x7f8e66c90780
+        res = <optimized out>
+        filename = <optimized out>
+        program_name = <optimized out>
+        res = <optimized out>
+#30 pymain_run_python (exitcode=0x7ffdf2e2e5f0) at Modules/main.c:633
+        main_importer_path = <optimized out>
+        interp = 0x7f8e67ba0f98 <_PyRuntime+76440>
+        config = 0x7f8e67ba1498 <_PyRuntime+77720>
+        path0 = 0x7f8e66cc07b0
+        main_importer_path = <optimized out>
+        interp = <optimized out>
+        config = <optimized out>
+        path0 = <optimized out>
+        res = <optimized out>
+        _tmp_op_ptr = <optimized out>
+        _tmp_old_op = <optimized out>
+        wstr = <optimized out>
+        old_alloc = <optimized out>
+        res = <optimized out>
+#31 Py_RunMain () at Modules/main.c:713
+        exitcode = <optimized out>
+#32 0x00007f8e6784ec68 in pymain_main (args=args@entry=0x7ffdf2e2e730)
+    at Modules/main.c:743
+        status = {_type = _PyStatus_TYPE_OK, func = <optimized out>,
+          err_msg = <optimized out>, exitcode = -1604332800}
+#33 0x00007f8e6784ed4d in Py_BytesMain (argc=<optimized out>,
+    argv=<optimized out>) at Modules/main.c:767
+        args = {argc = 3, use_bytes_argv = 1, bytes_argv = 0x7ffdf2e2e858,
+          wchar_argv = 0x0}
+#34 0x00007f8e673ad083 in __libc_start_main (main=0x563fe81cd060 <main>,
+    argc=3, argv=0x7ffdf2e2e858, init=<optimized out>, fini=<optimized out>,
+    rtld_fini=<optimized out>, stack_end=0x7ffdf2e2e848)
+    at ../csu/libc-start.c:308
+        self = <optimized out>
+        result = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {94832477131104,
+                6516920210032633576, 94832477130864, 140728678410320, 0, 0,
+                -6518074654040578328, -6526826287265143064},
+              mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x3,
+              0x7ffdf2e2e858}, data = {prev = 0x0, cleanup = 0x0,
+              canceltype = 3}}}
+        not_first_call = <optimized out>
+#35 0x0000563fe81cd09e in _start ()
+No symbol table info available.
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+Cython backtrace
+----------------
+#0  0x00007f8e6746bc20 in __GI___wait4 () at /build/glibc-LcI20x/glibc-2.31/posix/../sysdeps/unix/sysv/linux/wait4.c:27
+#1  0x00007f8e6746bbf0 in __GI___waitpid () at /build/glibc-LcI20x/glibc-2.31/posix/waitpid.c:38
+#2  0x00007f8e669f7079 in print_enhanced_backtrace () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:672
+#3  0x00007f8e669f6ff0 in sigdie () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:698
+#4  0x00007f8e669f9ef2 in sigdie_for_sig () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:256
+#5  0x00007f8e669f9ed0 in cysigs_signal_handler () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/cysignals-1.11.4/src/build/src/cysignals/implementation.c:361
+#6  0x00007f8e67c213e0 in __restore_rt ()
+#7  0x00007f8e0f25f750 in __pyx_f_4sage_6matrix_17matrix_gf2e_dense_17Matrix_gf2e_dense_swap_rows_c () at /usr/include/m4ri/mzd.h:413
+   408     * \param M Matrix
+   409     * \param rowa Row index.
+   410     * \param rowb Row index.
+   411     */
+   412
+>  413    static inline void mzd_row_swap(mzd_t *M, rci_t const rowa, rci_t const rowb) { _mzd_row_swap(M, rowa, rowb, 0); }
+   414
+   415    /**
+   416     * \brief copy row j from A to row i from B.
+   417     *
+#8  0x00007f8e17ac6c28 in __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:28169
+  28164            __pyx_t_3 = __Pyx_GetItemInt(__pyx_v_cycle, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28165            __Pyx_GOTREF(__pyx_t_3);
+  28166            __pyx_t_11 = __Pyx_PyIndex_AsSsize_t(__pyx_t_3); if (unlikely((__pyx_t_11 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28167            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28168            __pyx_t_10 = __Pyx_PyIndex_AsSsize_t(__pyx_v_elt); if (unlikely((__pyx_t_10 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 2926, __pyx_L1_error)
+> 28169            __pyx_t_3 = ((struct __pyx_vtabstruct_4sage_6matrix_7matrix0_Matrix *)__pyx_v_temp->__pyx_base.__pyx_base.__pyx_base.__pyx_vtab)->swap_rows_c(__pyx_v_temp, __pyx_t_11, __pyx_t_10); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 2926, __pyx_L1_error)
+  28170            __Pyx_GOTREF(__pyx_t_3);
+  28171            __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+  28172
+  28173            /* "sage/matrix/matrix0.pyx":2925
+#9  0x00007f8e17ac6ba0 in __pyx_pw_4sage_6matrix_7matrix0_6Matrix_87with_permuted_rows () at /home/nicho/sage2/src/sage/matrix/matrix0.c:27858
+  27853      }
+  27854      __Pyx_AddTraceback("sage.matrix.matrix0.Matrix.with_permuted_rows", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  27855      __Pyx_RefNannyFinishContext();
+  27856      return NULL;
+  27857      __pyx_L4_argument_unpacking_done:;
+> 27858      __pyx_r = __pyx_pf_4sage_6matrix_7matrix0_6Matrix_86with_permuted_rows(((struct __pyx_obj_4sage_6matrix_7matrix0_Matrix *)__pyx_v_self), __pyx_v_permutation);
+  27859
+  27860      /* function exit code */
+  27861      {
+  27862        Py_ssize_t __pyx_temp;
+#10 0x00007f8e6773d230 in cfunction_vectorcall_FASTCALL_KEYWORDS () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#11 0x00007f8e1770ca9f in __pyx_pf_4sage_6matrix_7matrix2_6Matrix_320krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:140849
+  140844        }
+  140845      }
+  140846      #endif
+  140847      {
+  140848        PyObject *__pyx_callargs[2] = {__pyx_t_2, __pyx_v_self_permutation};
+> 140849        __pyx_t_6 = __Pyx_PyObject_FastCall(__pyx_t_3, __pyx_callargs+1-__pyx_t_4, 1+__pyx_t_4);
+  140850        __Pyx_XDECREF(__pyx_t_2); __pyx_t_2 = 0;
+  140851        if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 18688, __pyx_L1_error)
+  140852        __Pyx_GOTREF(__pyx_t_6);
+  140853        __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
+#12 0x00007f8e1770c8d0 in __pyx_pw_4sage_6matrix_7matrix2_6Matrix_321krylov_rank_profile () at /home/nicho/sage2/src/sage/matrix/matrix2.c:7974
+  7969      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_2);
+  7970      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_3);
+  7971      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form);
+  7972      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_form);
+  7973      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_form_PID);
+> 7974      Py_CLEAR(clear_module_state->__pyx_kp_u_echelon_form_over);
+  7975      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place);
+  7976      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_in_place_classical);
+  7977      Py_CLEAR(clear_module_state->__pyx_n_s_echelon_strassen);
+  7978      Py_CLEAR(clear_module_state->__pyx_n_u_echelon_transformation);
+#13 0x00007f8e6769bdb0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#14 0x00007f8e677d8e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#15 0x00007f8e677d5955 in builtin_exec_impl () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bltinmodule.c:1096
+#16 0x00007f8e677d58b0 in builtin_exec () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/clinic/bltinmodule.c.h:586
+#17 0x00007f8e6769bdb0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/cpython/methodobject.h:50
+#18 0x00007f8e6770b7cd in _PyEval_EvalFrame () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/./Include/internal/pycore_ceval.h:89
+#19 0x00007f8e6770b630 in gen_send_ex2 () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:230
+#20 0x00007f8e6770cad0 in gen_send_ex () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Objects/genobject.c:274
+#21 0x00007f8e6769bdb0 in _PyEval_EvalFrameDefault () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/bytecodes.c:3093
+#22 0x00007f8e677d8e70 in PyEval_EvalCode () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/ceval.c:578
+#23 0x00007f8e67828770 in run_eval_code_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1722
+#24 0x00007f8e67828840 in run_mod () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1743
+#25 0x00007f8e67828950 in pyrun_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:1643
+#26 0x00007f8e6782b6b0 in _PyRun_SimpleFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:433
+#27 0x00007f8e6782bcf0 in _PyRun_AnyFileObject () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Python/pythonrun.c:78
+#28 0x00007f8e6784e80e in pymain_run_file_obj () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:360
+#29 0x00007f8e6784e7d0 in pymain_run_file () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:379
+#30 0x00007f8e6784df50 in pymain_run_python () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:633
+#31 0x00007f8e6784df20 in Py_RunMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:713
+#32 0x00007f8e6784ec20 in pymain_main () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:743
+#33 0x00007f8e6784ed10 in Py_BytesMain () at /home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/var/tmp/sage/build/python3-3.12.5/src/Modules/main.c:767
+#34 0x00007f8e673acf90 in __libc_start_main () at /build/glibc-LcI20x/glibc-2.31/csu/../csu/libc-start.c:308
+#35 0x0000563fe81cd070 in _start ()
+
+[Inferior 1 (process 1906) detached]
+27      ../sysdeps/unix/sysv/linux/wait4.c: No such file or directory.
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:135: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  mtime = datetime.utcfromtimestamp(os.path.getmtime(filename))
+/home/nicho/sage2/local/var/lib/sage/venv-python3.12.5/bin/cysignals-CSI:136: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  age = datetime.utcnow() - mtime
+Saved trace to /home/nicho/.sage/crash_logs/crash_rug23eqi.log
+------------------------------------------------------------------------
+Unhandled SIGSEGV: A segmentation fault occurred.
+This probably occurred because a *compiled* module has a bug
+in it and is not properly wrapped with sig_on(), sig_off().
+Python will now terminate.
+------------------------------------------------------------------------
+Segmentation fault

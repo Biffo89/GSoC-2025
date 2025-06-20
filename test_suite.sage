@@ -1,4 +1,5 @@
 import random
+import time
 
 class KrylovTestInstance:
     def manual_init(self, field, m, sigma, E, J, shift, degree):
@@ -171,6 +172,15 @@ class KrylovTestInstance:
         
         return f"KrylovTestInstance({field_string},int({self.m}),int({self.sigma}),options={{'manual':{{'E':{E_string},'J':{J_string},'shift':{shift_string},'degree':int({self.degree})}}}})"
 
+    def naive_krylov_rank_profile(self):
+        return self.E.naive_krylov_rank_profile(self.J,self.degree,self.shift)
+
+    def krylov_rank_profile(self):
+        return self.E.krylov_rank_profile(self.J,self.degree,self.shift)
+
+    def linear_interpolation_basis(self):
+        return self.E.linear_interpolation_basis(self.J,self.degree,'x',self.shift)
+
 def generate_test_set():
     m_set = [int(i) for i in [0,1,2,3,4,5,6,7,8]]
     sig_set = [int(i) for i in [0,1,2,3,4,5,6,7,8]]
@@ -212,32 +222,58 @@ def generate_test_set():
                 for E_opt in E_set:
                     for J_opt in J_set:
                         for shift in shift_set:
-                            if random.random() < 0.00001:
+                            if random.random() < 0.01:
                                 test_set.append(KrylovTestInstance(f,m,sig,{'E_mode':E_opt,'J_mode':J_opt,'shift_mode':shift}))
 
     return test_set
-    
+
+def is_profile_correct(test,profile=None):
+    if profile is None:
+        profile = test.krylov_rank_profile()
+    return profile == test.naive_krylov_rank_profile()
+
+def is_basis_correct(test,basis=None):
+    if basis is None:
+        basis = test.linear_interpolation_basis()
+    if not basis.is_popov(shifts=test.shift):
+        return False
+    return True
+
 def run_test_set(tests):
-    success = [{'profile_completed':False,'basis_completed':False,'profile_matches_naive':False,'basis_correct':False} for i in range(len(tests))]
+    success = [{'profile_completed':False,'basis_completed':False,'profile_correct':False,'basis_correct':False} for i in range(len(tests))]
     for i in range(len(tests)):
+        print(i)
+        print(tests[i].generator())
         test = tests[i]
         profile = None
         basis = None
-        try:
-            profile = test.E.krylov_rank_profile(test.J,test.degree,test.shift)
-            success[i]['profile_completed'] = True
-        except:
-            success[i]['profile_completed'] = False
-        if success[i]['profile_completed']:
-            naive_profile = test.E.naive_krylov_rank_profile(test.J,test.degree,test.shift)
-            success[i]['profile_matches_naive'] = (profile == naive_profile)
+        attempts = 3
+        # profile terminates
+        for attempt in range(attempts):
             try:
-                basis = test.E.linear_interpolation_basis(test.J,test.degree,test.field.gen(),test.shift)
-                success[i]['basis_completed'] = True
+                profile = test.krylov_rank_profile()
+                success[i]['profile_completed'] = True
+                break
             except:
-                success[i]['basis_completed'] = False
-            #if success[i]['basis_completed']:
-            #TODO
+                if attempt == attempts - 1:
+                    success[i]['profile_completed'] = False
+        if not success[i]['profile_completed']:
+            continue
+        # profile is correct
+        success[i]['profile_correct'] = is_profile_correct(test,profile)
+        # basis terminates
+        for attempt in range(attempts):
+            try:
+                basis = test.linear_interpolation_basis()
+                success[i]['basis_completed'] = True
+                break
+            except:
+                if attempt == attempts - 1:
+                    success[i]['basis_completed'] = False
+        if not success[i]['basis_completed']:
+            continue
+        # basis is correct
+        success[i]['basis_correct'] = is_basis_correct(test,basis)
     correct = sum([sum(result.values()) for result in success])
     total = sum([len(result) for result in success])
     ratio = (float(100)*float(correct))/float(total)
@@ -254,7 +290,7 @@ def run_test_set(tests):
         if bc > 0 and not success[i]['basis_completed']:
             bc -= 1
             failure = True
-        if pmn > 0 and not success[i]['profile_matches_naive']:
+        if pmn > 0 and not success[i]['profile_correct']:
             pmn -= 1
             failure = True
         if bcr > 0 and not success[i]['basis_correct']:
@@ -263,5 +299,32 @@ def run_test_set(tests):
         if failure:
             print(i)
             print(success[i])
-            print(test.generator())
-            break
+            print(tests[i].generator())
+
+def compare():
+    for m in range(10,110,10):
+        for sig in range(10,110,10):
+            if sig != m:
+                continue
+            test = KrylovTestInstance(GF(97),int(m),int(sig),{'E_mode':None,'J_mode':None,'shift_mode':'decreasing'})
+            start = time.time()
+            for i in range(10):
+                test.E.naive_krylov_rank_profile(test.J,test.degree,test.shift)
+            stop = time.time()
+            naive = (stop-start)/10
+            start = time.time()
+            for i in range(10):
+                test.E.krylov_rank_profile(test.J,test.degree,test.shift)
+            stop = time.time()
+            fast = (stop-start)/10
+            print(m,sig)
+            print(naive,fast)
+
+def measure():
+    test = KrylovTestInstance(GF(97),int(200),int(200),{'E_mode':None,'J_mode':None,'shift_mode':'decreasing'})
+    timing = [0]*20
+    test.E.krylov_rank_profile(test.J,test.degree,test.shift)
+    print(timing)
+    start = time.time()
+    test.E.linear_interpolation_basis(test.J,test.degree,test.field[x].gen(),test.shift)
+    print(time.time() - start)
