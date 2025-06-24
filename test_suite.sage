@@ -343,14 +343,156 @@ def compare():
             print(m,sig)
             print(naive,fast)
 
+def measure_once():
+    test = KrylovTestInstance(GF(256),int(256),int(256),{'E_mode':{'mode':'rank','rank':int(192)},'J_mode':{'mode':'rank','rank':int(192)},'shift_mode':'random'})
+    timer = []
+    test.E.linear_interpolation_basis(test.J,test.degree,'x',test.shift,timer)
+    print(timer)
+
 def measure():
-    test = KrylovTestInstance(GF(97),int(200),int(200),{'E_mode':None,'J_mode':None,'shift_mode':'decreasing'})
+    m_range = [int(2**i) for i in range(11)]
+    s_range = [int(2**i) for i in range(11)]
+    q_range = [i for i in range(16) if is_prime(i)]
+    p_range = [i+1 for i in range(10)]
+    trials = int(10)
+    
+    """for m in m_range:
+        field = GF(256)
+        sig = int(128)
+        tests = [KrylovTestInstance(field,m,sig,{'E_mode':{'mode':'rank','rank':min(m,sig)//int(2)},'J_mode':{'mode':'rank','rank':sig//int(2)},'shift_mode':'random'}) for i in range(trials)]
+        start_time = time.time()
+        for test in tests:
+            test.krylov_rank_profile()
+        mid_time = time.time()
+        for test in tests:
+            test.linear_interpolation_basis()
+        end_time = time.time()
+        print(f"m: {m},sigma: {sig},field: GF({256}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")
+    
+    for sig in s_range:
+        field = GF(256)
+        m = int(128)
+        tests = [KrylovTestInstance(field,m,sig,{'E_mode':{'mode':'rank','rank':min(m,sig)//int(2)},'J_mode':{'mode':'rank','rank':sig//int(2)},'shift_mode':'random'}) for i in range(trials)]
+        start_time = time.time()
+        for test in tests:
+            test.krylov_rank_profile()
+        mid_time = time.time()
+        for test in tests:
+            test.linear_interpolation_basis()
+        end_time = time.time()
+        print(f"m: {m},sigma: {sig},field: GF({256}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")
+    
+    for q in q_range:
+        field = GF(q**5)
+        sig = int(128)
+        m = int(128)
+        tests = [KrylovTestInstance(field,m,sig,{'E_mode':{'mode':'rank','rank':min(m,sig)//int(2)},'J_mode':{'mode':'rank','rank':sig//int(2)},'shift_mode':'random'}) for i in range(trials)]
+        start_time = time.time()
+        for test in tests:
+            test.krylov_rank_profile()
+        mid_time = time.time()
+        for test in tests:
+            test.linear_interpolation_basis()
+        end_time = time.time()
+        print(f"m: {m},sigma: {sig},field: GF({q**5}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")"""
+    
+    for p in p_range:
+        field = GF(2**p)
+        sig = int(128)
+        m = int(128)
+        tests = [KrylovTestInstance(field,m,sig,{'E_mode':{'mode':'rank','rank':min(m,sig)//int(2)},'J_mode':{'mode':'rank','rank':sig//int(2)},'shift_mode':'random'}) for i in range(trials)]
+        start_time = time.time()
+        for test in tests:
+            test.krylov_rank_profile()
+        mid_time = time.time()
+        for test in tests:
+            test.linear_interpolation_basis()
+        end_time = time.time()
+        print(f"m: {m},sigma: {sig},field: GF({2**p}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")
+    
+    '''for q in q_range:
+        for p in p_range:
+            field = GF(q**p)
+            for m in m_range:
+                for sig in s_range:
+                    tests = [KrylovTestInstance(field,m,sig,{'E_mode':{'mode':'rank','rank':min(m,sig)//int(2)},'J_mode':{'mode':'rank','rank':sig//int(2)},'shift_mode':'random'}) for i in range(trials)]
+                    start_time = time.time()
+                    for test in tests:
+                        test.krylov_rank_profile()
+                    mid_time = time.time()
+                    for test in tests:
+                        test.linear_interpolation_basis()
+                    end_time = time.time()
+                    print(f"m: {m},sigma: {sig},field: GF({q**p}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")'''
+    '''test = KrylovTestInstance(GF(97),int(200),int(200),{'E_mode':None,'J_mode':None,'shift_mode':'decreasing'})
     timing = [0]*20
     test.E.krylov_rank_profile(test.J,test.degree,test.shift)
     print(timing)
     start = time.time()
     test.E.linear_interpolation_basis(test.J,test.degree,test.field[x].gen(),test.shift)
-    print(time.time() - start)
+    print(time.time() - start)'''
 
 def reproduce_seg_fault():
-    matrix.zero(GF(4),2,0).with_permuted_rows(Permutation([2,1]))
+    matrix.zero(GF(4),2,0).with_permuted_rows(Permutation([2,1])) # fixed
+
+def fast_perms(shift,deg,c,d):
+    # shift[c] - shift[i] + d - number of rows preceding with strictly smaller d
+    # (i < c and shift[i] <= shift[c] + d) - +1 if smaller c but degree matches
+
+    return sum(min(max(shift[c] - shift[i] + d + (i < c and shift[i] <= shift[c] + d),0),deg+1) for i in range(len(shift)))
+
+def fast_perms_inv(shift,deg,i):
+    # UNFINISHED
+    # take away all elements of shift lower than shift[c]+d-deg (?),
+    # do recursive call and add deg*(num_removed)
+    n = len(shift)
+    levels = sorted([shift[j],j,0] for j in range(n))
+    # lut = [0]*n
+    # for i in range(n):
+        # lut[levels[i][1]] = i
+    for i in range(n-1):
+        levels[j+1][2] = levels[j][2] + (j+1)*(levels[j+1][0] - levels[j][0])
+    low = 0
+    high = n-1
+    mid = 0
+    while low <= high:
+        mid = (low+high)//2
+        if i < levels[mid][2]:
+            high = mid - 1
+        else:
+            low = mid + 1
+    
+    big = lut[c]
+    while True:
+        start_level = levels[big][2]
+        while big != n-1 and levels[big][2] == levels[big+1][2]:
+            big += 1
+        if big == n-1 or start_level + (d+1)*(big+1) <= levels[big+1][2]:
+            return start_level + d*(big+1) + sum(1 for x in levels[:big+1] if x[1] < c)
+        else:
+            d -= (levels[big+1][2]-start_level)//(big+1)
+            big += 1
+    print(False)
+
+def check_fast_perms():
+    for i in range(1000):
+        n = random.randint(1,20)
+        shift = [random.randint(0,n*n) for j in range(n)]
+        
+        priority = lambda c,d : shift[c] + d
+        index = lambda i : (i%n,i//n)
+        index_inv = lambda c,d : c + d*n
+        
+        priority_triplets = sorted([[priority(*index(i)),index(i),i] for i in range(n*(n+max(shift)-min(shift)+1))])
+        priority_permutation = Permutation([t[2]+1 for t in priority_triplets])
+        priority_permutation_inv = priority_permutation.inverse()
+
+        # maps row c of self*J^d to position i in striped Krylov matrix
+        # +/- 1 as permutations are 1-indexed, matrices are 0-indexed
+        phi = lambda c,d : priority_permutation_inv(index_inv(c,d) + 1) - 1
+        phi_inv = lambda i : index(priority_permutation(i + 1) - 1)
+        
+        sorting = [priority_permutation_inv(t+1)-1 for t in range(n*(n+max(shift)-min(shift)+1))]
+        ind = [fast_perms(shift,n+max(shift)-min(shift),*index(i)) for i in range(n*(n+max(shift)-min(shift)+1))]
+        if sorting != ind:
+            print(shift,deg)
