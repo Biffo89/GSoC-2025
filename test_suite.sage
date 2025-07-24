@@ -125,12 +125,16 @@ class KrylovTestInstance:
         if options['shift_mode'] == 'decreasing':
             self.shift = [i for i in reversed(range(m))]
         if options['shift_mode'] == 'random':
-            self.shift = [i for i in range(m)]
-            shuffle(self.shift)
+            if sigma == 0:
+                self.shift = [0]*m
+            else:
+                full_range = [i for i in range(m*sigma)]
+                shuffle(full_range)
+                self.shift = full_range[:m]
         if options['shift_mode'] == 'hermite':
-            self.shift = [i*m*sigma for i in range(m)]
+            self.shift = [i*sigma for i in range(m)]
         if options['shift_mode'] == 'reverse_hermite':
-            self.shift = [i*m*sigma for i in reversed(range(m))]
+            self.shift = [i*sigma for i in reversed(range(m))]
         if options['shift_mode'] == 'plateau':
             self.shift = [0]*(m//2) + [m*sigma]*(m - m//2)
         if options['shift_mode'] == 'reverse_plateau':
@@ -173,13 +177,29 @@ class KrylovTestInstance:
         return f"KrylovTestInstance({field_string},int({self.m}),int({self.sigma}),options={{'manual':{{'E':{E_string},'J':{J_string},'shift':{shift_string},'degree':int({self.degree})}}}})"
 
     def naive_krylov_rank_profile(self):
+        self.E._clear_cache()
+        self.J._clear_cache()
         return self.E.naive_krylov_rank_profile(self.J,self.degree,self.shift)
 
     def krylov_rank_profile(self):
+        self.E._clear_cache()
+        self.J._clear_cache()
         return self.E.krylov_rank_profile(self.J,self.degree,self.shift)
 
-    def linear_interpolation_basis(self):
-        return self.E.linear_interpolation_basis(self.J,self.degree,'x',self.shift)
+    def krylov_rank_profile_early_exit(self):
+        self.E._clear_cache()
+        self.J._clear_cache()
+        return self.E.krylov_rank_profile_early_exit(self.J,self.degree,self.shift)
+
+    def linear_interpolation_basis(self,polynomial_output=True):
+        self.E._clear_cache()
+        self.J._clear_cache()
+        return self.E.linear_interpolation_basis(self.J,self.degree,'x',self.shift, polynomial_output=polynomial_output)
+
+    def linear_interpolation_basis_fast_perm(self):
+        self.E._clear_cache()
+        self.J._clear_cache()
+        return self.E.linear_interpolation_basis_fast_perm(self.J,self.degree,'x',self.shift)
 
 def generate_test_set():
     m_set = [int(i) for i in [0,1,2,3,4,5,6,7,8]]
@@ -233,7 +253,7 @@ def generate_test_set():
                 for E_opt in E_set:
                     for J_opt in J_set:
                         for shift in shift_set:
-                            if random.random() < 0.001: # ~20 seconds
+                            if random.random() < 0.01: # ~2 minutes
                                 test_set.append(KrylovTestInstance(f,m,sig,{'E_mode':E_opt,'J_mode':J_opt,'shift_mode':shift}))
 
     return test_set
@@ -243,7 +263,9 @@ def is_profile_correct(test,profile=None):
         profile = test.krylov_rank_profile()
     return profile == test.naive_krylov_rank_profile()
 
-def is_basis_correct(test,basis=None):
+def is_basis_correct(test,basis=None,profile=None):
+    if profile is None:
+        profile = test.krylov_rank_profile()
     if basis is None:
         basis = test.linear_interpolation_basis()
     if not basis.is_popov(shifts=test.shift):
@@ -259,6 +281,8 @@ def is_basis_correct(test,basis=None):
             return False
     except:
         return False
+    if len(profile[0]) != sum((basis[i,i].degree() for i in range(basis.nrows()))):
+        return False
     return True
 
 def run_test_set(tests):
@@ -268,31 +292,23 @@ def run_test_set(tests):
         test = tests[i]
         profile = None
         basis = None
-        attempts = 3
+        attempts = 1
         # profile terminates
-        for attempt in range(attempts):
-            try:
-                profile = test.krylov_rank_profile()
-                success[i]['profile_completed'] = True
-                break
-            except:
-                if attempt == attempts - 1:
-                    success[i]['profile_completed'] = False
+        try:
+            profile = test.krylov_rank_profile()
+            success[i]['profile_completed'] = True
+        except:
+            success[i]['profile_completed'] = False
         if not success[i]['profile_completed']:
             continue
         # profile is correct
         success[i]['profile_correct'] = is_profile_correct(test,profile)
         # basis terminates
-        for attempt in range(attempts):
-            try:
-                basis = test.linear_interpolation_basis()
-                success[i]['basis_completed'] = True
-                break
-            except:
-                if attempt == attempts - 1:
-                    success[i]['basis_completed'] = False
-        if not success[i]['basis_completed']:
-            continue
+        try:
+            basis = test.linear_interpolation_basis()
+            success[i]['basis_completed'] = True
+        except:
+            success[i]['basis_completed'] = False
         # basis is correct
         success[i]['basis_correct'] = is_basis_correct(test,basis)
     running_time = time.time() - start
@@ -319,12 +335,12 @@ def run_test_set(tests):
         if bcr > 0 and not success[i]['basis_correct']:
             bcr -= 1
             failure = True
-        if failure and tests[i].m*tests[i].sigma != 0:
+        if failure:
             print(i)
             print(success[i])
             print(tests[i].generator())
 
-def compare():
+"""def compare():
     for m in range(10,110,10):
         for sig in range(10,110,10):
             if sig != m:
@@ -341,14 +357,19 @@ def compare():
             stop = time.time()
             fast = (stop-start)/10
             print(m,sig)
-            print(naive,fast)
+            print(naive,fast)"""
 
-def measure_once():
-    test = KrylovTestInstance(GF(256),int(256),int(256),{'E_mode':{'mode':'rank','rank':int(192)},'J_mode':{'mode':'rank','rank':int(192)},'shift_mode':'random'})
+def measure_once(b):
+    test = KrylovTestInstance(GF(97),int(1024),int(1024),{'E_mode':None,'J_mode':None,'shift_mode':'random'})
+    print(test.E.base_ring())
+    print(timeit('test.J * test.J',globals={'test':test}))
     timer = []
-    test.E.linear_interpolation_basis(test.J,test.degree,'x',test.shift,timer)
+    #test.E.krylov_rank_profile(test.J,test.degree,test.shift,False,timer)
     print(timer)
-
+    timer = []
+    test.E.linear_interpolation_basis(test.J,test.degree,'x',test.shift,b,timer)
+    print(timer)
+""" OBSOLETE CODE
 def measure():
     m_range = [int(2**i) for i in range(11)]
     s_range = [int(2**i) for i in range(11)]
@@ -356,7 +377,7 @@ def measure():
     p_range = [i+1 for i in range(10)]
     trials = int(10)
     
-    """for m in m_range:
+    for m in m_range:
         field = GF(256)
         sig = int(128)
         tests = [KrylovTestInstance(field,m,sig,{'E_mode':{'mode':'rank','rank':min(m,sig)//int(2)},'J_mode':{'mode':'rank','rank':sig//int(2)},'shift_mode':'random'}) for i in range(trials)]
@@ -394,7 +415,7 @@ def measure():
         for test in tests:
             test.linear_interpolation_basis()
         end_time = time.time()
-        print(f"m: {m},sigma: {sig},field: GF({q**5}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")"""
+        print(f"m: {m},sigma: {sig},field: GF({q**5}), krylov_time: {(mid_time-start_time)/trials:.3f}s, basis_time: {(end_time-mid_time)/trials:.3f}s")
     
     for p in p_range:
         field = GF(2**p)
@@ -496,3 +517,64 @@ def check_fast_perms():
         ind = [fast_perms(shift,n+max(shift)-min(shift),*index(i)) for i in range(n*(n+max(shift)-min(shift)+1))]
         if sorting != ind:
             print(shift,deg)
+"""
+def benchmark():
+    cases = [(GF(2),int(4096),int(1024),int(4096),int(512)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(512),int(1024),int(512),int(256)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(256)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
+
+    for case in cases:
+        field = case[0]
+        print (f"GF({field.order()})\n")
+        m_range = [int(1),int(4),int(16)]
+        for sig in [case[1]//4,case[1]//2,case[1]]:
+            print("")
+        for m in m_range:
+            for sig in [case[1]//int(4),case[1]//int(2),case[1]]:
+                print(f"m = {m}, sigma = {sig}, shift = uniform")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+
+                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
+
+                print(f"m = {m}, sigma = {sig}, shift = hermite")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
+
+                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
+            print("\n")
+        m_range = [case[2]//int(2),int(15)*(case[2]//int(16)),case[2]]
+        for m in m_range:
+            for sig in [case[2]//int(4),case[2]//int(2),case[2]]:
+                print(f"m = {m}, sigma = {sig}, shift = uniform")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+
+                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
+
+                print(f"m = {m}, sigma = {sig}, shift = hermite")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
+
+                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
+            print("\n")
+        m_range = [int(1),int(4),int(16)]
+        for m in m_range:
+            for sig in [case[3]//int(4),case[3]//int(2),case[3]]:
+                print(f"m = {m}, sigma = {sig}, shift = uniform")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+
+                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
+
+                print(f"m = {m}, sigma = {sig}, shift = hermite")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
+
+                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
+            print("\n")
+        m_range = [case[4]//int(2),int(15)*(case[4]//int(16)),case[4]]
+        for m in m_range:
+            for sig in [case[4]//int(4),case[4]//int(2),case[4]]:
+                print(f"m = {m}, sigma = {sig}, shift = uniform")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+
+                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
+
+                print(f"m = {m}, sigma = {sig}, shift = hermite")
+                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
+
+                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
+            print("\n")

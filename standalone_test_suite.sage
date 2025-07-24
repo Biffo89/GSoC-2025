@@ -1141,28 +1141,40 @@ def benchmark():
             for m in m_range:
                 print(f"m = {m}, sigma = {sig}, shift = uniform")
                 test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+
+                # naive profile
                 start = time.time()
                 for t in range(trials):
                     test.naive_krylov_rank_profile()
                 print(f"naive_krylov_rank_profile: {(time.time()-start)/trials:.3f}s")
+
+                # profile
                 start = time.time()
                 for t in range(trials):
                     test.krylov_rank_profile()
                 print(f"krylov_rank_profile: {(time.time()-start)/trials:.3f}s")
+
+                # basis
                 start = time.time()
                 for t in range(trials):
                     test.linear_interpolation_basis()
                 print(f"linear_interpolation_basis: {(time.time()-start)/trials:.3f}s\n")
                 print(f"m = {m}, sigma = {sig}, shift = [0,sigma,2*sigma,...,(m-1)*sigma]")
                 test.shift = [int(i)*test.sigma for i in range(test.m)]
+
+                # naive profile
                 start = time.time()
                 for t in range(trials):
                     test.naive_krylov_rank_profile()
                 print(f"naive_krylov_rank_profile: {(time.time()-start)/trials:.3f}s")
+
+                # profile
                 start = time.time()
                 for t in range(trials):
                     test.krylov_rank_profile()
                 print(f"krylov_rank_profile: {(time.time()-start)/trials:.3f}s")
+
+                # basis
                 start = time.time()
                 for t in range(trials):
                     test.linear_interpolation_basis()
