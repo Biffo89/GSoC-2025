@@ -1,5 +1,6 @@
 import random
 import time
+import tabulate
 
 class KrylovTestInstance:
     def manual_init(self, field, m, sigma, E, J, shift, degree):
@@ -194,12 +195,12 @@ class KrylovTestInstance:
     def linear_interpolation_basis(self,polynomial_output=True):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.linear_interpolation_basis(self.J,self.degree,'x',self.shift, polynomial_output=polynomial_output)
+        return self.E.linear_interpolation_basis(self.J,'x',self.degree,self.shift)
 
     def linear_interpolation_basis_fast_perm(self):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.linear_interpolation_basis_fast_perm(self.J,self.degree,'x',self.shift)
+        return self.E.linear_interpolation_basis_fast_perm(self.J,'x',self.degree,self.shift)
 
 def generate_test_set():
     m_set = [int(i) for i in [0,1,2,3,4,5,6,7,8]]
@@ -352,62 +353,47 @@ def measure_once(b):
     print(timer)
 
 def benchmark():
-    cases = [(GF(2),int(4096),int(1024),int(4096),int(512)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(512),int(1024),int(512),int(256)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(256)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
+    cases = [(GF(2),int(4096),int(1024),int(4096),int(512)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(1024),int(512),int(512),int(256)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(256)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
 
     for case in cases:
         field = case[0]
-        print (f"GF({field.order()})\n")
-        m_range = [int(1),int(4),int(16)]
-        for sig in [case[1]//4,case[1]//2,case[1]]:
-            print("")
-        for m in m_range:
-            for sig in [case[1]//int(4),case[1]//int(2),case[1]]:
-                print(f"m = {m}, sigma = {sig}, shift = uniform")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
-
-                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
-
-                print(f"m = {m}, sigma = {sig}, shift = hermite")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
-
-                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
-            print("\n")
-        m_range = [case[2]//int(2),int(15)*(case[2]//int(16)),case[2]]
-        for m in m_range:
-            for sig in [case[2]//int(4),case[2]//int(2),case[2]]:
-                print(f"m = {m}, sigma = {sig}, shift = uniform")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
-
-                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
-
-                print(f"m = {m}, sigma = {sig}, shift = hermite")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
-
-                print(f"krylov_rank_profile: {timeit('test.krylov_rank_profile()',globals={'test':test})}s")
-            print("\n")
-        m_range = [int(1),int(4),int(16)]
-        for m in m_range:
-            for sig in [case[3]//int(4),case[3]//int(2),case[3]]:
-                print(f"m = {m}, sigma = {sig}, shift = uniform")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
-
-                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
-
-                print(f"m = {m}, sigma = {sig}, shift = hermite")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
-
-                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
-            print("\n")
-        m_range = [case[4]//int(2),int(15)*(case[4]//int(16)),case[4]]
-        for m in m_range:
-            for sig in [case[4]//int(4),case[4]//int(2),case[4]]:
-                print(f"m = {m}, sigma = {sig}, shift = uniform")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
-
-                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
-
-                print(f"m = {m}, sigma = {sig}, shift = hermite")
-                test = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
-
-                print(f"linear_interpolation_basis (polynomial): {timeit('test.linear_interpolation_basis(True)',globals={'test':test})}s")
-            print("\n")
+        print(f"GF({field.order()})\n")
+        mul_results = {}
+        for sig in sorted(list(set([case[i+1]//int(j) for i in range(4) for j in [1,2,4]]))):
+            M1 = matrix.random(field, sig)
+            M2 = matrix.random(field, sig)
+            t = timeit('M1*M2', globals={'M1':M1, 'M2':M2})
+            mul_results[sig] = f"{t.stats[3]:.3g} {t.stats[4]}"
+        data = [[key,mul_results[key]] for key in mul_results.keys()]
+        print('matrix multiplication')
+        print(tabulate.tabulate(data,headers=['n','time'],tablefmt='grid'))
+        print()
+        for func in ['profile','basis']:
+            results_u = {}
+            results_h = {}
+            columns = set()
+            rows = set()
+            for m_size in ['small','big']:
+                i = 2 * (func == 'basis') + 1 * (m_size == 'big') + 1
+                m_range = [int(1),int(4),int(16)] if m_size == 'small' else [case[i]//int(4), case[i]//int(2), case[i]]
+                for m in m_range:
+                    rows.add(m)
+                    if m not in results_u:
+                        results_u[m] = {}
+                        results_h[m] = {}
+                    for sig in [case[i]//int(4),case[i]//int(2),case[i]]:
+                        columns.add(sig)
+                        test_u = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+                        test_h = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
+                        t_u = timeit('test_u.krylov_rank_profile()' if func == 'profile' else 'test_u.linear_interpolation_basis()',globals={'test_u':test_u})
+                        t_h = timeit('test_h.krylov_rank_profile()' if func == 'profile' else 'test_h.linear_interpolation_basis()',globals={'test_h':test_h})
+                        results_u[m][sig] = f"{t_u.stats[3]:.3g} {t_u.stats[4]}"
+                        results_h[m][sig] = f"{t_h.stats[3]:.3g} {t_h.stats[4]}"
+            data_u = [[results_u[m].get(sigma,None) for sigma in sorted(list(columns))] for m in sorted(list(rows))]
+            data_h = [[results_h[m].get(sigma,None) for sigma in sorted(list(columns))] for m in sorted(list(rows))]
+            print('uniform '+func)
+            print(tabulate.tabulate(data_u,headers=['*   sigma\n    *    \nm       *'] + sorted(list(columns)), showindex = sorted(list(rows)),tablefmt='grid'))
+            print()
+            print('hermite '+func)
+            print(tabulate.tabulate(data_h,headers=['*   sigma\n    *    \nm       *'] + sorted(list(columns)), showindex = sorted(list(rows)),tablefmt='grid'))
+            print()
