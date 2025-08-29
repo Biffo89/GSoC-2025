@@ -17,8 +17,10 @@ class KrylovTestInstance:
             raise ValueError('J is not a matrix.')
         if shift is not None and (not(isinstance(shift,list)) or any(not(isinstance(elem,int)) for elem in shift)):
             raise ValueError('shift is not a list of integers.')
-        if not(isinstance(degree,int) and 1 <= degree and degree & (degree -1) == 0):
-            raise ValueError('sigma is not a integer that is a power of two.')
+        if not(isinstance(degree,list)) or len(degree) != m or any(not(isinstance(elem,int)) or elem < 0 for elem in shift):
+            raise ValueError('degree is not a non-negative list of the correct size.')
+        # if not(isinstance(degree,int) and 1 <= degree and degree & (degree -1) == 0):
+            # raise ValueError('sigma is not a integer that is a power of two.')
 
         # field validation
         if E.base_ring() != field:
@@ -142,15 +144,21 @@ class KrylovTestInstance:
             self.shift = [m*sigma]*(m//2) + [0]*(m - m//2)
 
         # degree assignment
+        maxdegree = 0
         if sigma == 0:
-            self.degree = 1
+            maxdegree = 1
         elif sigma & (sigma-1) == 0:
-            self.degree = sigma
+            maxdegree = sigma
         else:
-            self.degree = sigma
-            while self.degree & (self.degree+1) != 0:
-                self.degree |= self.degree >> 1
-            self.degree += 1
+            maxdegree = sigma
+            while maxdegree & (maxdegree+1) != 0:
+                maxdegree |= maxdegree >> 1
+            maxdegree += 1
+        _, rows = self.E.krylov_basis(self.J,self.shift)
+        self.degree = [int(0)] * self.m
+        for x in rows:
+            self.degree[x[0]] = x[1] if self.degree[x[0]] < x[1] else self.degree[x[0]]
+        self.degree = [random.randint(self.degree[i], maxdegree+1) for i in range(0, m)]
 
     def generator(self):
         # field
@@ -175,32 +183,35 @@ class KrylovTestInstance:
         # shift
         shift_string = f"[{','.join([f"int({i})" for i in self.shift])}]"
         
-        return f"KrylovTestInstance({field_string},int({self.m}),int({self.sigma}),options={{'manual':{{'E':{E_string},'J':{J_string},'shift':{shift_string},'degree':int({self.degree})}}}})"
+        # degree
+        degree_string = f"[{','.join([f"int({i})" for i in self.degree])}]"
+        
+        return f"KrylovTestInstance({field_string},int({self.m}),int({self.sigma}),options={{'manual':{{'E':{E_string},'J':{J_string},'shift':{shift_string},'degree':{degree_string}}}}})"
 
-    def naive_krylov_rank_profile(self):
+    def naive_krylov_profile(self):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.naive_krylov_rank_profile(self.J,self.degree,self.shift)
+        return self.E.naive_krylov_basis(self.J,self.shift,self.degree)
 
-    def krylov_rank_profile(self):
+    def krylov_profile(self, output_rows=True, algorithm=None):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.krylov_rank_profile(self.J,self.degree,self.shift)
+        return self.E.krylov_basis(self.J, shifts=self.shift, degrees=self.degree, output_rows=output_rows, algorithm=algorithm)
 
-    def krylov_rank_profile_early_exit(self):
+    def krylov_profile_early_exit(self):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.krylov_rank_profile_early_exit(self.J,self.degree,self.shift)
+        return self.E.krylov_profile_early_exit(self.J,self.shift,self.degree)
 
-    def linear_interpolation_basis(self,polynomial_output=True):
+    def linear_interpolation_basis(self,var=None):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.linear_interpolation_basis(self.J,'x',self.degree,self.shift)
+        return self.E.krylov_kernel_basis(self.J,degrees=self.degree,shifts=self.shift,var=var)
 
     def linear_interpolation_basis_fast_perm(self):
         self.E._clear_cache()
         self.J._clear_cache()
-        return self.E.linear_interpolation_basis_fast_perm(self.J,'x',self.degree,self.shift)
+        return self.E.linear_interpolation_basis_fast_perm(self.J,'x',self.shift,self.degree)
 
 def generate_test_set():
     m_set = [int(i) for i in [0,1,2,3,4,5,6,7,8]]
@@ -261,28 +272,47 @@ def generate_test_set():
 
 def is_profile_correct(test,profile=None):
     if profile is None:
-        profile = test.krylov_rank_profile()
-    return profile == test.naive_krylov_rank_profile()
+        profile = test.krylov_profile(algorithm='elimination')
+    return profile == test.krylov_profile(algorithm='naive')
 
-def is_basis_correct(test,basis=None,profile=None):
+def is_basis_correct(test,poly_basis=None,coeff_basis=None,profile=None):
     if profile is None:
-        profile = test.krylov_rank_profile()
-    if basis is None:
-        basis = test.linear_interpolation_basis()
-    if not basis.is_popov(shifts=test.shift):
+        profile = test.krylov_profile()
+    if poly_basis is None:
+        poly_basis = test.linear_interpolation_basis(var='x')
+    if coeff_basis is None:
+        coeff_basis = test.linear_interpolation_basis(var=None)
+    if not poly_basis.is_popov(shifts=test.shift):
         return False
-    if basis.nrows()*basis.ncols() != 0 and basis.degree() > test.sigma:
+    if poly_basis.nrows()*poly_basis.ncols() != 0 and poly_basis.degree() > test.sigma:
         return False
     priority = lambda c,d : test.shift[c] + d
     index = lambda i : (i%test.m,i//test.m)
-    priority_triplets = sorted([[priority(*index(i)),index(i),i] for i in range(test.m*(test.degree+1))])
-    priority_permutation = Permutation([t[2]+1 for t in priority_triplets])
+
+    # check equality
     try:
-        if basis.expansion(test.degree).with_permuted_columns(priority_permutation)*test.E.striped_krylov_matrix(test.J,test.degree,test.shift) != matrix.zero(test.field,test.m,test.sigma):
+        poly_basis_ex = matrix.block([[poly_basis.coefficient_matrix(i) for i in range(max(test.degree,default=0) + 1)]],subdivide=False)
+        coord = test.E._krylov_row_coordinates(test.shift,test.degree,[index(i) for i in range(poly_basis_ex.ncols())])
+        perm = Permutation(x[2] + 1 for x in coord)
+        poly_basis_ex.permute_columns(perm)
+        if poly_basis_ex.matrix_from_columns([i for i in range(poly_basis_ex.ncols()) if poly_basis_ex[:,i] != 0]) != coeff_basis[0] or poly_basis_ex.matrix_from_columns([i for i in range(poly_basis_ex.ncols()) if poly_basis_ex[:,i] == 0]) != 0:
+            return False
+
+        if tuple([(*coord[i][:2],i) for i in range(poly_basis_ex.ncols()) if poly_basis_ex[:,i] != 0]) != coeff_basis[1]:
             return False
     except:
         return False
-    if len(profile[0]) != sum((basis[i,i].degree() for i in range(basis.nrows()))):
+    
+    priority_triplets = [[priority(*index(i)),index(i)] for i in range(test.m*(max(test.degree, default=0)+1)) if index(i)[1] <= test.degree[index(i)[0]]]
+    priority_triplets = sorted([[t[0],t[1],i] for i,t in enumerate(priority_triplets)])
+    priority_permutation = Permutation([t[2]+1 for t in priority_triplets])
+    try:
+        #if matrix.block([[basis.coefficient_matrix(i) for i in range(max(test.degree, default=0)+2)]]).with_permuted_columns(priority_permutation)*test.E.krylov_matrix(test.J,test.shift,max(test.degree, default=0)+1) != matrix.zero(test.field,test.m,test.sigma):
+        if coeff_basis[0]*test.E.krylov_matrix(test.J,test.shift,test.degree).matrix_from_rows([x[2] for x in coeff_basis[1]]) != 0:
+            return False
+    except:
+        return False
+    if len(profile[1]) != sum((poly_basis[i,i].degree() for i in range(poly_basis.nrows()))):
         return False
     return True
 
@@ -293,25 +323,27 @@ def run_test_set(tests):
         test = tests[i]
         profile = None
         basis = None
-        attempts = 1
         # profile terminates
         try:
-            profile = test.krylov_rank_profile()
+            profile = test.krylov_profile(algorithm='elimination')
             success[i]['profile_completed'] = True
         except:
             success[i]['profile_completed'] = False
         if not success[i]['profile_completed']:
             continue
         # profile is correct
-        success[i]['profile_correct'] = is_profile_correct(test,profile)
+        success[i]['profile_correct'] = is_profile_correct(test, profile)
         # basis terminates
         try:
-            basis = test.linear_interpolation_basis()
+            coeff_basis = test.linear_interpolation_basis(var=None)
+            poly_basis = test.linear_interpolation_basis(var='x')
             success[i]['basis_completed'] = True
         except:
             success[i]['basis_completed'] = False
+        if not success[i]['basis_completed']:
+            continue
         # basis is correct
-        success[i]['basis_correct'] = is_basis_correct(test,basis)
+        success[i]['basis_correct'] = is_basis_correct(test,poly_basis,coeff_basis,profile)
     running_time = time.time() - start
     correct = sum([sum(result.values()) for result in success])
     total = sum([len(result) for result in success])
@@ -346,13 +378,13 @@ def measure_once(b):
     print(test.E.base_ring())
     print(timeit('test.J * test.J',globals={'test':test}))
     timer = []
-    #test.E.krylov_rank_profile(test.J,test.degree,test.shift,False,timer)
+    #test.E.krylov_profile(test.J,test.degree,test.shift,False,timer)
     print(timer)
     timer = []
     test.E.linear_interpolation_basis(test.J,test.degree,'x',test.shift,b,timer)
     print(timer)
 
-def benchmark():
+def compare_naive():
     cases = [(GF(2),int(4096),int(1024),int(4096),int(512)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(1024),int(512),int(512),int(256)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(256)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
 
     for case in cases:
@@ -368,7 +400,59 @@ def benchmark():
         print('matrix multiplication')
         print(tabulate.tabulate(data,headers=['n','time'],tablefmt='grid'))
         print()
-        for func in ['profile','basis']:
+        for func in ['profile']:
+            results_u = {}
+            results_h = {}
+            columns = set()
+            rows = set()
+            for m_size in ['small']:
+                i = 2 * (func == 'basis') + 1 * (m_size == 'big') + 1
+                m_range = [int(1),int(2),int(3),int(4),int(5)] if field != GF(243) else [int(1),int(2),int(3),int(4),int(5),int(8),int(9),int(16),int(17),int(32),int(33)]
+                for m in m_range:
+                    rows.add(m)
+                    if m not in results_u:
+                        results_u[m] = {}
+                        results_h[m] = {}
+                    for sig in [int(1 << i) for i in range(case[i].bit_length()-1)]:
+                        if m != sig and (m != 16 or sig != case[i]):
+                            continue
+                        columns.add(sig)
+                        test_u = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
+                        test_h = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
+                        t_nu = timeit("test_u.krylov_profile(algorithm='naive')" if func == 'profile' else 'test_u.linear_interpolation_basis(output_coefficients=False)',globals={'test_u':test_u},number=125)
+                        t_nh = timeit("test_h.krylov_profile(algorithm='naive')" if func == 'profile' else 'test_h.linear_interpolation_basis(output_coefficients=False)',globals={'test_h':test_h},number=125)
+                        t_u = timeit("test_u.krylov_profile(algorithm='elimination')" if func == 'profile' else 'test_u.linear_interpolation_basis(output_coefficients=True)',globals={'test_u':test_u},number=125)
+                        t_h = timeit("test_h.krylov_profile(algorithm='elimination')" if func == 'profile' else 'test_h.linear_interpolation_basis(output_coefficients=True)',globals={'test_h':test_h},number=125)
+                        results_u[m][sig] = f"{t_u.stats[3]:.3g} {t_u.stats[4]} ({t_u.stats[0]})" if t_nu is None else f"{t_nu.stats[3]:.3g} {t_nu.stats[4]} ({t_nu.stats[0]}) / {t_u.stats[3]:.3g} {t_u.stats[4]} ({t_u.stats[0]})"
+                        results_h[m][sig] = f"{t_h.stats[3]:.3g} {t_h.stats[4]} ({t_h.stats[0]})" if t_nh is None else f"{t_nh.stats[3]:.3g} {t_nh.stats[4]} ({t_nh.stats[0]}) / {t_u.stats[3]:.3g} {t_u.stats[4]} ({t_h.stats[0]})"
+            data_u = [[results_u[m].get(sigma,None) for sigma in sorted(list(columns))] for m in sorted(list(rows))]
+            data_h = [[results_h[m].get(sigma,None) for sigma in sorted(list(columns))] for m in sorted(list(rows))]
+            print('uniform '+func)
+            print(tabulate.tabulate(data_u,headers=['*   sigma\n    *    \nm       *'] + sorted(list(columns)), showindex = sorted(list(rows)),tablefmt='grid'))
+            print()
+            print('hermite '+func)
+            print(tabulate.tabulate(data_h,headers=['*   sigma\n    *    \nm       *'] + sorted(list(columns)), showindex = sorted(list(rows)),tablefmt='grid'))
+            print()
+
+def benchmark():
+    cases = [(GF(2),int(4096),int(2048),int(4096),int(1024)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(1024),int(512),int(1024),int(512)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(512)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
+    #cases = [(x[0],x[1]//int(4),x[2]//int(4),x[3]//int(4),x[4]//int(4)) for x in cases]
+    for case in cases:
+        field = case[0]
+        print(f"GF({field.order()})\n")
+        mul_results = {}
+        gau_results = {}
+        for sig in sorted(list(set([case[i+1]//int(j) for i in range(4) for j in [1,2,4]]))):
+            M1 = matrix.random(field, sig)
+            M2 = matrix.random(field, sig)
+            t_mul = timeit('M1._clear_cache();M2._clear_cache();M1*M2', globals={'M1':M1, 'M2':M2})
+            t_gau = timeit('M1._clear_cache(); M1.echelon_form()', globals={'M1':M1})
+            mul_results[sig] = f"{t_mul.stats[3]:.3g} {t_mul.stats[4]}"
+            gau_results[sig] = f"{t_gau.stats[3]:.3g} {t_gau.stats[4]}"
+        data = [[key,mul_results[key],gau_results[key]] for key in mul_results.keys()]
+        print(tabulate.tabulate(data,headers=['n','multiply','gauss'],tablefmt='grid'))
+        print()
+        for func in ['basis']:
             results_u = {}
             results_h = {}
             columns = set()
@@ -382,13 +466,17 @@ def benchmark():
                         results_u[m] = {}
                         results_h[m] = {}
                     for sig in [case[i]//int(4),case[i]//int(2),case[i]]:
+                        if sig not in [m,case[i]] or m not in [sig,int(16),case[i]]:
+                            continue
                         columns.add(sig)
                         test_u = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
                         test_h = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
-                        t_u = timeit('test_u.krylov_rank_profile()' if func == 'profile' else 'test_u.linear_interpolation_basis()',globals={'test_u':test_u})
-                        t_h = timeit('test_h.krylov_rank_profile()' if func == 'profile' else 'test_h.linear_interpolation_basis()',globals={'test_h':test_h})
-                        results_u[m][sig] = f"{t_u.stats[3]:.3g} {t_u.stats[4]}"
-                        results_h[m][sig] = f"{t_h.stats[3]:.3g} {t_h.stats[4]}"
+                        t_nu = timeit("test_u.krylov_profile(algorithm='naive')" if func == 'profile' else 'test_u.linear_interpolation_basis(output_coefficients=False)',globals={'test_u':test_u})
+                        t_nh = timeit("test_h.krylov_profile(algorithm='naive',var=''x'')" if func == 'profile' else 'test_h.linear_interpolation_basis(var=''x'')',globals={'test_h':test_h})
+                        t_u = timeit("test_u.krylov_profile(algorithm='elimination')" if func == 'profile' else 'test_u.linear_interpolation_basis()',globals={'test_u':test_u})
+                        t_h = timeit("test_h.krylov_profile(algorithm='elimination')" if func == 'profile' else 'test_h.linear_interpolation_basis()',globals={'test_h':test_h})
+                        results_u[m][sig] = f"{t_u.stats[3]:.3g} {t_u.stats[4]}" if t_nu is None else f"{t_u.stats[3]:.3g} {t_u.stats[4]} / {t_nu.stats[3]:.3g} {t_nu.stats[4]}"
+                        results_h[m][sig] = f"{t_h.stats[3]:.3g} {t_h.stats[4]}" if t_nh is None else f"{t_h.stats[3]:.3g} {t_h.stats[4]} / {t_nh.stats[3]:.3g} {t_nh.stats[4]}"
             data_u = [[results_u[m].get(sigma,None) for sigma in sorted(list(columns))] for m in sorted(list(rows))]
             data_h = [[results_h[m].get(sigma,None) for sigma in sorted(list(columns))] for m in sorted(list(rows))]
             print('uniform '+func)
