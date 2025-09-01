@@ -157,7 +157,7 @@ class KrylovTestInstance:
         _, rows = self.E.krylov_basis(self.J,self.shift)
         self.degree = [int(0)] * self.m
         for x in rows:
-            self.degree[x[0]] = x[1] if self.degree[x[0]] < x[1] else self.degree[x[0]]
+            self.degree[x[0]] = x[1] + 1 if self.degree[x[0]] <= x[1] else self.degree[x[0]]
         self.degree = [random.randint(self.degree[i], maxdegree+1) for i in range(0, m)]
 
     def generator(self):
@@ -188,6 +188,7 @@ class KrylovTestInstance:
         
         return f"KrylovTestInstance({field_string},int({self.m}),int({self.sigma}),options={{'manual':{{'E':{E_string},'J':{J_string},'shift':{shift_string},'degree':{degree_string}}}}})"
 
+    #OBSOLETE
     def naive_krylov_profile(self):
         self.E._clear_cache()
         self.J._clear_cache()
@@ -198,6 +199,7 @@ class KrylovTestInstance:
         self.J._clear_cache()
         return self.E.krylov_basis(self.J, shifts=self.shift, degrees=self.degree, output_rows=output_rows, algorithm=algorithm)
 
+    #OBSOLETE
     def krylov_profile_early_exit(self):
         self.E._clear_cache()
         self.J._clear_cache()
@@ -208,6 +210,7 @@ class KrylovTestInstance:
         self.J._clear_cache()
         return self.E.krylov_kernel_basis(self.J,degrees=self.degree,shifts=self.shift,var=var)
 
+    #OBSOLETE
     def linear_interpolation_basis_fast_perm(self):
         self.E._clear_cache()
         self.J._clear_cache()
@@ -286,33 +289,27 @@ def is_basis_correct(test,poly_basis=None,coeff_basis=None,profile=None):
         return False
     if poly_basis.nrows()*poly_basis.ncols() != 0 and poly_basis.degree() > test.sigma:
         return False
-    priority = lambda c,d : test.shift[c] + d
-    index = lambda i : (i%test.m,i//test.m)
 
-    # check equality
     try:
-        poly_basis_ex = matrix.block([[poly_basis.coefficient_matrix(i) for i in range(max(test.degree,default=0) + 1)]],subdivide=False)
-        coord = test.E._krylov_row_coordinates(test.shift,test.degree,[index(i) for i in range(poly_basis_ex.ncols())])
-        perm = Permutation(x[2] + 1 for x in coord)
-        poly_basis_ex.permute_columns(perm)
-        if poly_basis_ex.matrix_from_columns([i for i in range(poly_basis_ex.ncols()) if poly_basis_ex[:,i] != 0]) != coeff_basis[0] or poly_basis_ex.matrix_from_columns([i for i in range(poly_basis_ex.ncols()) if poly_basis_ex[:,i] == 0]) != 0:
+        # check equality
+        coords = test.E._krylov_row_coordinates(test.shift, test.degree)
+        poly_basis_ex = matrix.block([[poly_basis.coefficient_matrix(i).matrix_from_columns([j for j in range(test.m) if i <= test.degree[j]]) for i in range(max(test.degree,default=0) + 1)]],subdivide=False).with_permuted_columns(Permutation([x[2] + 1 for x in coords]))
+        coeff_basis_ex = matrix(test.field, test.m, sum(test.degree)+test.m)
+        for i in range(len(coeff_basis[1])):
+            idx = coeff_basis[1][i][2]
+            for j in range(test.m):
+                coeff_basis_ex[j,idx] = coeff_basis[0][j,i]
+        if poly_basis_ex != coeff_basis_ex:
             return False
-
-        if tuple([(*coord[i][:2],i) for i in range(poly_basis_ex.ncols()) if poly_basis_ex[:,i] != 0]) != coeff_basis[1]:
-            return False
-    except:
-        return False
-    
-    priority_triplets = [[priority(*index(i)),index(i)] for i in range(test.m*(max(test.degree, default=0)+1)) if index(i)[1] <= test.degree[index(i)[0]]]
-    priority_triplets = sorted([[t[0],t[1],i] for i,t in enumerate(priority_triplets)])
-    priority_permutation = Permutation([t[2]+1 for t in priority_triplets])
-    try:
-        #if matrix.block([[basis.coefficient_matrix(i) for i in range(max(test.degree, default=0)+2)]]).with_permuted_columns(priority_permutation)*test.E.krylov_matrix(test.J,test.shift,max(test.degree, default=0)+1) != matrix.zero(test.field,test.m,test.sigma):
+        for i,x in enumerate(coeff_basis[1]):
+            if x[:2] != coords[x[2]][:2]:
+                return False
+        # check kernel
         if coeff_basis[0]*test.E.krylov_matrix(test.J,test.shift,test.degree).matrix_from_rows([x[2] for x in coeff_basis[1]]) != 0:
             return False
+        if len(profile[1]) != sum((poly_basis[i,i].degree() for i in range(poly_basis.nrows()))):
+            return False
     except:
-        return False
-    if len(profile[1]) != sum((poly_basis[i,i].degree() for i in range(poly_basis.nrows()))):
         return False
     return True
 
@@ -373,6 +370,7 @@ def run_test_set(tests):
             print(success[i])
             print(tests[i].generator())
 
+#OBSOLETE
 def measure_once(b):
     test = KrylovTestInstance(GF(97),int(1024),int(1024),{'E_mode':None,'J_mode':None,'shift_mode':'random'})
     print(test.E.base_ring())
@@ -384,6 +382,7 @@ def measure_once(b):
     test.E.linear_interpolation_basis(test.J,test.degree,'x',test.shift,b,timer)
     print(timer)
 
+#OBSOLETE
 def compare_naive():
     cases = [(GF(2),int(4096),int(1024),int(4096),int(512)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(1024),int(512),int(512),int(256)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(256)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
 
@@ -435,7 +434,7 @@ def compare_naive():
             print()
 
 def benchmark():
-    cases = [(GF(2),int(4096),int(2048),int(4096),int(1024)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(1024),int(512),int(1024),int(512)),(GF(257),int(1024),int(512),int(1024),int(512)),(GF(3**10),int(64),int(64),int(64),int(64)),(GF(2**16),int(64),int(64),int(64),int(64)),(GF(65537),int(1024),int(512),int(1024),int(512)),(GF(next_prime(2**26)),int(256),int(256),int(256),int(256))]
+    cases = [(GF(2),int(2048),int(256),int(2048),int(256)),(GF(3**5),int(64),int(64),int(64),int(64)),(GF(2**8),int(512),int(256),int(512),int(256)),(GF(257),int(512),int(256),int(512),int(256)),(GF(3**10),int(32),int(32),int(32),int(32)),(GF(2**16),int(32),int(32),int(32),int(32)),(GF(65537),int(512),int(256),int(512),int(256)),(GF(next_prime(2**26)),int(128),int(128),int(128),int(128))]
     #cases = [(x[0],x[1]//int(4),x[2]//int(4),x[3]//int(4),x[4]//int(4)) for x in cases]
     for case in cases:
         field = case[0]
@@ -452,7 +451,7 @@ def benchmark():
         data = [[key,mul_results[key],gau_results[key]] for key in mul_results.keys()]
         print(tabulate.tabulate(data,headers=['n','multiply','gauss'],tablefmt='grid'))
         print()
-        for func in ['basis']:
+        for func in ['basis','profile']:
             results_u = {}
             results_h = {}
             columns = set()
@@ -466,13 +465,15 @@ def benchmark():
                         results_u[m] = {}
                         results_h[m] = {}
                     for sig in [case[i]//int(4),case[i]//int(2),case[i]]:
-                        if sig not in [m,case[i]] or m not in [sig,int(16),case[i]]:
-                            continue
+                        #if sig not in [m,case[i]] or m not in [sig,int(16),case[i]]:
+                            #continue
                         columns.add(sig)
                         test_u = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'uniform'})
                         test_h = KrylovTestInstance(field,m,sig,{'E_mode':None,'J_mode':None,'shift_mode':'hermite'})
-                        t_nu = timeit("test_u.krylov_profile(algorithm='naive')" if func == 'profile' else 'test_u.linear_interpolation_basis(output_coefficients=False)',globals={'test_u':test_u})
-                        t_nh = timeit("test_h.krylov_profile(algorithm='naive',var=''x'')" if func == 'profile' else 'test_h.linear_interpolation_basis(var=''x'')',globals={'test_h':test_h})
+                        t_nu = None
+                        t_nh = None
+                        #t_nu = timeit("test_u.krylov_profile(algorithm='naive')" if func == 'profile' else 'test_u.linear_interpolation_basis(output_coefficients=False)',globals={'test_u':test_u})
+                        #t_nh = timeit("test_h.krylov_profile(algorithm='naive',var=''x'')" if func == 'profile' else 'test_h.linear_interpolation_basis(var=''x'')',globals={'test_h':test_h})
                         t_u = timeit("test_u.krylov_profile(algorithm='elimination')" if func == 'profile' else 'test_u.linear_interpolation_basis()',globals={'test_u':test_u})
                         t_h = timeit("test_h.krylov_profile(algorithm='elimination')" if func == 'profile' else 'test_h.linear_interpolation_basis()',globals={'test_h':test_h})
                         results_u[m][sig] = f"{t_u.stats[3]:.3g} {t_u.stats[4]}" if t_nu is None else f"{t_u.stats[3]:.3g} {t_u.stats[4]} / {t_nu.stats[3]:.3g} {t_nu.stats[4]}"
