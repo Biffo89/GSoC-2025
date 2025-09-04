@@ -279,21 +279,20 @@ def is_profile_correct(test,profile=None):
     return profile == test.krylov_profile(algorithm='naive')
 
 def is_basis_correct(test,poly_basis=None,coeff_basis=None,profile=None):
-    if profile is None:
-        profile = test.krylov_profile()
-    if poly_basis is None:
-        poly_basis = test.linear_interpolation_basis(var='x')
-    if coeff_basis is None:
-        coeff_basis = test.linear_interpolation_basis(var=None)
-    if not poly_basis.is_popov(shifts=test.shift):
-        return False
-    if poly_basis.nrows()*poly_basis.ncols() != 0 and poly_basis.degree() > test.sigma:
-        return False
-
     try:
+        if profile is None:
+            profile = test.krylov_profile()
+        if poly_basis is None:
+            poly_basis = test.linear_interpolation_basis(var='x')
+        if coeff_basis is None:
+            coeff_basis = test.linear_interpolation_basis(var=None)
+        if not poly_basis[0].is_popov(shifts=test.shift):
+            return False
+        if poly_basis[0].nrows()*poly_basis[0].ncols() != 0 and poly_basis[0].degree() > test.sigma:
+            return False
         # check equality
         coords = test.E._krylov_row_coordinates(test.shift, test.degree)
-        poly_basis_ex = matrix.block([[poly_basis.coefficient_matrix(i).matrix_from_columns([j for j in range(test.m) if i <= test.degree[j]]) for i in range(max(test.degree,default=0) + 1)]],subdivide=False).with_permuted_columns(Permutation([x[2] + 1 for x in coords]))
+        poly_basis_ex = matrix.block([[poly_basis[0].coefficient_matrix(i).matrix_from_columns([j for j in range(test.m) if i <= test.degree[j]]) for i in range(max(test.degree,default=0) + 1)]],subdivide=False).with_permuted_columns(Permutation([x[2] + 1 for x in coords]))
         coeff_basis_ex = matrix(test.field, test.m, sum(test.degree)+test.m)
         for i in range(len(coeff_basis[1])):
             idx = coeff_basis[1][i][2]
@@ -301,13 +300,15 @@ def is_basis_correct(test,poly_basis=None,coeff_basis=None,profile=None):
                 coeff_basis_ex[j,idx] = coeff_basis[0][j,i]
         if poly_basis_ex != coeff_basis_ex:
             return False
+        if poly_basis[1] != coeff_basis[1]:
+            return False
         for i,x in enumerate(coeff_basis[1]):
             if x[:2] != coords[x[2]][:2]:
                 return False
         # check kernel
         if coeff_basis[0]*test.E.krylov_matrix(test.J,test.shift,test.degree).matrix_from_rows([x[2] for x in coeff_basis[1]]) != 0:
             return False
-        if len(profile[1]) != sum((poly_basis[i,i].degree() for i in range(poly_basis.nrows()))):
+        if len(profile[1]) != sum((poly_basis[0][i,i].degree() for i in range(poly_basis[0].nrows()))):
             return False
     except:
         return False
